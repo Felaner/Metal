@@ -2,7 +2,7 @@
   "name": "metal",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "serve.js",
   "scripts": {
     "start": "node server.js",
     "run": "nodemon server.js"
