@@ -5,9 +5,16 @@
   "main": "serve.js",
   "scripts": {
     "start": "node server.js",
-    "run": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "handlebars": "^4.7.7",
+    "nodemon": "^2.0.12"
+  }
 }
