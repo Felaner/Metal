@@ -1,61 +1,53 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #828282;" >
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">IronBull</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" style="font-size: 24px;  font-weight: bold;">
-                {{#if isHome}}
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">Главная</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Главная</a>
-                    </li>
-                {{/if}}
+<nav class="navbar">
+    <ul class="navbar-items">
+        {{#if isHome}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+        {{/if}}
 
-                {{#if isAbout}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">О компании</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">О компании</a>
-                    </li>
-                {{/if}}
+        {{#if isAbout}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+        {{/if}}
 
-                {{#if isProjects}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Наши проекты</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Наши проекты</a>
-                    </li>
-                {{/if}}
+        {{#if isProjects}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Наши проекты</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Наши проекты</a>
+            </li>
+        {{/if}}
 
-                {{#if isNews}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Новости</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Новости</a>
-                    </li>
-                {{/if}}
+        {{#if isNews}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Новости</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Новости</a>
+            </li>
+        {{/if}}
 
-                {{#if isContacts}}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Контакты</a>
-                    </li>
-                {{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Контакты</a>
-                    </li>
-                {{/if}}
-            </ul>
-        </div>
-    </div>
+        {{#if isContacts}}
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+        {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+        {{/if}}
+    </ul>
 </nav>
