@@ -10,6 +10,7 @@ const path = require('path');
 const app = express();
 
 const homeRoute = require('./routes/home');
+const newsRoute = require('./routes/news');
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -26,6 +27,7 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.urlencoded({extended: true}));
 
 app.use('/', homeRoute);
+app.use('/news', newsRoute);
 
 const PORT = 3000;
 
