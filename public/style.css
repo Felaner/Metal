@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-top: 50px;
-    padding-right: 80px;
+    padding-right: 250px;
 }
 
 .menu-item {
@@ -92,6 +92,26 @@ body {
 .slider .prev:hover,
 .slider .next:hover {
     color: white;
+}
+.slider-dots {
+    position: absolute;
+    text-align: center;
+    top: 95%;
+    width: 100%;
+    margin: 0 auto;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 4px;
+    width: 35px;
+    margin: 0 2px;
+    background-color: #fff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active,
+.slider-dots_item:hover {
+    background-color: #ff9900;
 }
 .slideText {
     text-align: center;
