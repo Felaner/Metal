@@ -1,5 +1,25 @@
+/*@font-face {*/
+/*    font-family: ChakraPetch bold;*/
+/*    src: url("fonts/chakrapetch-bold.ttf");*/
+/*}*/
+/*@font-face {*/
+/*    font-family: ChakraPetch light;*/
+/*    src: url("fonts/chakrapetch-light.ttf");*/
+/*}*/
+/*@font-face {*/
+/*    font-family: ChakraPetch medium;*/
+/*    src: url("fonts/chakrapetch-medium.ttf");*/
+/*}*/
+/*@font-face {*/
+/*    font-family: ChakraPetch regular;*/
+/*    src: url("fonts/chakrapetch-regular.ttf");*/
+/*}*/
+/*@font-face {*/
+/*    font-family: ChakraPetch semibold;*/
+/*    src: url("fonts/chakrapetch-semibold.ttf");*/
+/*}*/
 * {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 body {
