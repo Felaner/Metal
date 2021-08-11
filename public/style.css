@@ -27,7 +27,7 @@ body {
 }
 
 .menu-item {
-    margin-left: 35px;
+    margin-left: 12px;
 }
 
 .menu-page {
@@ -78,7 +78,7 @@ body {
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 0 200px;
+    padding: 0 250px;
     color: #ff9900;
     font-weight: bold;
     font-size: 48px;
@@ -133,5 +133,24 @@ body {
 
 }
 
+.product{
+    background-color: var(--gray);
+    padding-top: 50px;
+}
+
+.product-title{
+    color: #FFFFFF;
+    font-size: 36px;
+    text-align: center;
+}
+.products-box{
+    max-width: 600px;
+    height: 400px;
+}
+.product-img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 
