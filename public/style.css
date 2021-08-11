@@ -13,6 +13,8 @@ body {
 
 /*БЛОК МЕНЮ*/
 .menu {
+    position: relative;
+    z-index: 1;
     background-color: var(--gray);
     height: 100px;
 }
@@ -138,19 +140,31 @@ body {
     background-image: -o-linear-gradient(left, #fff, #ff9900, #fff);
 }
 .slider .item {
+    z-index: -1;
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
 @-webkit-keyframes fade {
-    from { left: 0; }
-    to { left: 300px; }
+    from {
+        opacity: 0.4;
+        transform: scale(1.1, 1.1)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
 }
 @keyframes fade {
-    from { left: 0; }
-    to { left: 300px; }
-
+    from {
+        opacity: 0.4;
+        transform: scale(1.1, 1.1)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
 }
 
 .product{
