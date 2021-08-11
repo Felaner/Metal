@@ -1,23 +1,34 @@
-/*@font-face {*/
-/*    font-family: ChakraPetch bold;*/
-/*    src: url("fonts/chakrapetch-bold.ttf");*/
-/*}*/
-/*@font-face {*/
-/*    font-family: ChakraPetch light;*/
-/*    src: url("fonts/chakrapetch-light.ttf");*/
-/*}*/
-/*@font-face {*/
-/*    font-family: ChakraPetch medium;*/
-/*    src: url("fonts/chakrapetch-medium.ttf");*/
-/*}*/
-/*@font-face {*/
-/*    font-family: ChakraPetch regular;*/
-/*    src: url("fonts/chakrapetch-regular.ttf");*/
-/*}*/
-/*@font-face {*/
-/*    font-family: ChakraPetch semibold;*/
-/*    src: url("fonts/chakrapetch-semibold.ttf");*/
-/*}*/
+@font-face {
+    font-family: 'Chakra Petch';
+    src: local('Chakra Petch Light'), local('ChakraPetch-Light'), url('fonts/Chakrapetchlight.woff2') format('woff2'), url('fonts/Chakrapetchlight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chakra Petch';
+    src: local('Chakra Petch Regular'), local('ChakraPetch-Regular'), url('fonts/Chakrapetchregular.woff2') format('woff2'), url('fonts/Chakrapetchregular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chakra Petch';
+    src: local('Chakra Petch SemiBold'), local('ChakraPetch-SemiBold'), url('fonts/Chakrapetchsemibold.woff2') format('woff2'), url('fonts/Chakrapetchsemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Chakra Petch';
+    src: local('Chakra Petch Medium'), local('ChakraPetch-Medium'), url('fonts/Chakrapetchmedium.woff2') format('woff2'), url('fonts/Chakrapetchmedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chakra Petch';
+    src: local('Chakra Petch Bold'), local('ChakraPetch-Bold'), url('fonts/Chakrapetchbold.woff2') format('woff2'), url('fonts/Chakrapetchbold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
 * {
     font-family: 'Chakra Petch', sans-serif;
 }
@@ -136,6 +147,7 @@ body {
     background-color: #ff9900;
 }
 .slideText {
+    font-weight: 300;
     text-align: center;
     position: absolute;
     color: #fff;
