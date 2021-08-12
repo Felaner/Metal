@@ -1,3 +1,7 @@
+.slider .container {
+    display: flex;
+    justify-content: space-between;
+}
 .slider{
     border-top: 2px solid #ff9900;
     max-width: 100%;
@@ -18,7 +22,6 @@
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 0 250px;
     color: #ff9900;
     font-weight: bold;
     font-size: 48px;
@@ -26,7 +29,7 @@
     border-radius: 0 3px 3px 0;
 }
 .slider .next {
-    right: 0;
+    right: 10%;
     border-radius: 3px 0 0 3px;
 }
 .slider .prev:hover,
@@ -35,10 +38,9 @@
 }
 .slider-dots {
     position: absolute;
-    text-align: center;
     top: 95%;
-    width: 100%;
-    margin: 0 auto;
+    width: 80%;
+    text-align: center;
 }
 .slider-dots_item{
     cursor: pointer;

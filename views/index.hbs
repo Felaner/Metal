@@ -25,38 +25,41 @@
             Производство металло конструкций
         </div>
     </div>
+    <div class="container">
+        <a class="prev" onclick="minusSlide()">&#10094;</a>
+        <a class="next" onclick="plusSlide()">&#10095;</a>
 
-    <a class="prev" onclick="minusSlide()">&#10094;</a>
-    <a class="next" onclick="plusSlide()">&#10095;</a>
-
-    <div class="slider-dots">
-        {{#if sliderImages.length}}
-            {{#each sliderImages}}
-                <span class="slider-dots_item" onclick="currentSlide({{sliderImages.length}})"></span>
-            {{/each}}
-        {{/if}}
+        <div class="slider-dots">
+            {{#if sliderImages.length}}
+                {{#each sliderImages}}
+                    <span class="slider-dots_item" onclick="currentSlide({{sliderImages.length}})"></span>
+                {{/each}}
+            {{/if}}
+        </div>
     </div>
 </div>
 
 
 
 <div class="about">
-    <h2 class="about-title">О компании</h2>
-    <div class="about-description">Что-то, и что-то еще</div>
-    <div class="reasons">
-        <div class="reason1"></div>
-        <div class="reason2"></div>
-        <div class="reason3"></div>
-        <div class="reason4"></div>
-        <div class="reason5"></div>
-        <div class="reason6"></div>
-        <div class="reason7"></div>
+    <div class="container">
+        <h2 class="about-title">О <span>компании</span></h2>
+        <div class="about-description">Что-то, и что-то еще</div>
+        <div class="reasons">
+            <div class="reason1"></div>
+            <div class="reason2"></div>
+            <div class="reason3"></div>
+            <div class="reason4"></div>
+            <div class="reason5"></div>
+            <div class="reason6"></div>
+            <div class="reason7"></div>
+        </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="product">
-        <h2 class="product-title">Наша продукция</h2>
+<div class="product">
+    <div class="container">
+        <h2 class="product-title"><span>Наша</span> продукция</h2>
         <div class="product-wrapper">
             <div class="products">
                 <div class="products-box">

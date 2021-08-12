@@ -6,10 +6,13 @@
     border-bottom: 2px solid #ff9900;
 }
 .about-title {
-    font-size: 24px;
+    font-size: 36px;
     color: #FFFFFF;
     text-align: center;
     margin-top: 30px;
+}
+.about-title span {
+    color: #ff9900;
 }
 .about-description {
     color: #FFFFFF;

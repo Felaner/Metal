@@ -1,6 +1,6 @@
 .product{
     background-color: var(--gray);
-    padding: 50px 250px 0 250px;
+    padding: 20px 0;
 }
 
 .product-wrapper{
@@ -9,9 +9,14 @@
 }
 
 .product-title{
+    margin-top: 0;
+    margin-bottom: 0;
     color: #FFFFFF;
     font-size: 36px;
     text-align: center;
+}
+.product span {
+    color: #ff9900;
 }
 
 .products-box{
