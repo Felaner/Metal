@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .product-subtitle{
@@ -32,10 +32,14 @@
 }
 
 .product-info{
-    width: 400px;
-    height: 950px;
+    width: 600px;
+    height: 902px;
     border: 2px solid #ff9900;
-    margin-top: 50px;
-    margin-left: 150px;
+    margin-top: 30px;
+    margin-left: 30px;
     color: #FFFFFF;
+}
+
+.product-description {
+    padding: 10px;
 }

@@ -1,4 +1,5 @@
 .slider{
+    border-top: 2px solid #ff9900;
     max-width: 100%;
     position: relative;
     margin: auto;
@@ -86,7 +87,7 @@
 }
 @-webkit-keyframes fade {
     from {
-        opacity: 0.4;
+        opacity: 0.8;
         transform: scale(1.1, 1.1)
     }
     to {
@@ -96,7 +97,7 @@
 }
 @keyframes fade {
     from {
-        opacity: 0.4;
+        opacity: 0.8;
         transform: scale(1.1, 1.1)
     }
     to {
