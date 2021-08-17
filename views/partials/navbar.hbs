@@ -21,6 +21,24 @@
                 </li>
             {{/if}}
 
+            {{#if isProduction}}
+                <li class="menu-item dropdown">
+                    <a class="menu-page active" href="/production">Наша продукция</a>
+                    <ul class="submenu">
+                        <li><a href="">Item 1</a></li>
+                        <li><a href="">Item 2</a></li>
+                    </ul>
+                </li>
+            {{else}}
+                <li class="menu-item dropdown">
+                    <a class="menu-page" href="/production">Наша продукция</a>
+                    <ul class="submenu">
+                        <li><a href="">Item 1</a></li>
+                        <li><a href="">Item 2</a></li>
+                    </ul>
+                </li>
+            {{/if}}
+
             {{#if isProjects}}
                 <li class="menu-item">
                     <a class="menu-page active" href="/works">Наши проекты</a>

@@ -11,6 +11,7 @@ const app = express();
 
 const homeRoute = require('./routes/home');
 const aboutRoute = require('./routes/about');
+const productionRoute = require('./routes/production');
 const worksRoute = require('./routes/works');
 const newsRoute = require('./routes/news');
 const contactsRoute = require('./routes/contacts');
@@ -31,6 +32,7 @@ app.use(express.urlencoded({extended: true}));
 
 app.use('/', homeRoute);
 app.use('/about', aboutRoute);
+app.use('/production', productionRoute);
 app.use('/works', worksRoute);
 app.use('/news', newsRoute);
 app.use('/contacts', contactsRoute);
