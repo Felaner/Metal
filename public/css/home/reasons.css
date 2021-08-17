@@ -2,52 +2,55 @@
     text-align: center;
 }
 
-.gaonutosal {
-    float: left;
+.reasons-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-.pesontedan {
+.reasons-block {
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-    width: 600px;
+    border-top: 1px solid #ABB6BF;
+    border-bottom: 1px solid #ABB6BF;
+    width: 800px;
+    height: 100px;
 }
 
-.pesontedan input {
+.reasons-block input {
     position: absolute;
     opacity: 0;
     z-index: -1;
 }
 
-.pesontedan label {
+.reasons-block label {
     position: relative;
     display: block;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 26px;
 }
 
-.pesontedan-content {
+.reasons-description {
     max-height: 0;
     overflow: hidden;
     transition: max-height .40s;
     font-size: 14px;
 }
 
-.pesontedan-content {
+.reasons-description {
 
 }
-.pesontedan-content p {
-    border-bottom: 1px solid #000000;
+.reasons-description p {
 }
 /* :checked */
-.pesontedan input:checked ~ .pesontedan-content {
-    max-height: 100vh;
+.reasons-block input:checked ~ .reasons-description {
+    max-height: 400px;
 }
 
 /* Icon */
-.pesontedan label::after {
+.reasons-block label::after {
     position: absolute;
     right: 0;
     top: 0;
@@ -61,15 +64,51 @@
     transition: all .40s;
     border-bottom: none;
 }
-.pesontedan input[type=checkbox] + label::after {
+.reasons-block input[type=checkbox] + label::after {
     content: "+";
 }
-.pesontedan input[type=radio] + label::after {
+.reasons-block input[type=radio] + label::after {
     content: "\25BC";
 }
-.pesontedan input[type=checkbox]:checked + label::after {
+.reasons-block input[type=checkbox]:checked + label::after {
     transform: rotate(315deg);
 }
-.pesontedan input[type=radio]:checked + label::after {
+.reasons-block input[type=radio]:checked + label::after {
     transform: rotateX(180deg);
+}
+
+.mobile_item_plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    bottom: 35px;
+    width: 26px;
+    height: 26px;
+    background-color: #000;
+    margin: 0 auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.mobile_item_plus::before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 2px;
+    background-color: #1eacc7;
+}
+.mobile_item_plus::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    display: block;
+    height: 14px;
+    width: 2px;
+    background-color: #1eacc7;
 }
