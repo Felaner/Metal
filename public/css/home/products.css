@@ -1,50 +1,100 @@
-.product{
+.product {
     background-color: var(--gray);
     padding: 20px 0;
 }
 
-.product-wrapper{
-    display: flex;
-
+.product-title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
 }
 
-.product-title{
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #FFFFFF;
-    font-size: 36px;
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tabs__links {
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    white-space: nowrap;
+    margin-bottom: 50px;
+    border: 2px solid #ff9900;
+    /*box-shadow: 0 2px 4px 0 #e3f2fd;*/
+}
+
+.tabs__links>a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ff9900;
     text-align: center;
 }
-.product span {
-    color: #ff9900;
+
+.tabs__links>a:hover {
+    background-color: rgba(227, 242, 253, 0.3);
 }
 
-.products-box{
-    width: 400px;
-    height: 200px;
-    border: 2px solid #ff9900;
+.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
+.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
+.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.tabs>div:not(.tabs__links) {
+    display: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+@media (min-width: 576px) {
+    .tabs {
+        flex-direction: row;
+        margin-top: 100px;
+    }
+
+    .tabs__links {
+        flex-direction: column;
+        border: none;
+        box-shadow: none;
+    }
+
+    .tabs__links>a {
+        border: 2px solid #ff9900;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tabs__links>a:last-child {
+        margin-bottom: 0;
+    }
+
+    .tabs>div:not(.tabs__links) {
+        padding-left: 15px;
+    }
+}
+
+.tabs>div:target {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    margin-top: 30px;
 }
 
-.product-subtitle{
-    color: #FFFFFF;
-    font-size: 22px;
+.tab{
+    width: 350px;
+    height: 200px;
     text-align: center;
-}
+    background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL") ;
 
-.product-info{
-    width: 600px;
-    height: 902px;
-    border: 2px solid #ff9900;
-    margin-top: 30px;
-    margin-left: 30px;
-    color: #FFFFFF;
 }
-
-.product-description {
-    padding: 10px;
+.tab-description{
+    background: #FFFFFF;
+    height: 636px;
+    width: 400px;
+    margin-left: 150px;
 }

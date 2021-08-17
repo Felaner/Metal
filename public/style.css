@@ -6,6 +6,7 @@
 @import url('css/news.css');
 @import url('css/contacts.css');
 @import url('css/footer.css');
+@import url('css/home/reasons.css');
 
 * {
     font-family: 'Chakra Petch', sans-serif;
@@ -21,7 +22,11 @@ body {
     margin: 0 auto;
 }
 
-:root{
+:root {
     --gray: #1d1c1c;
+}
+
+span.title-color {
+    color: #ff9900;
 }
 

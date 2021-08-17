@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
 }
+
 .slider{
     border-top: 2px solid #ff9900;
     max-width: 100%;
@@ -9,6 +10,7 @@
     margin: auto;
     height: 500px;
 }
+
 .slider .item img {
     object-fit: cover;
     width: 100%;
@@ -67,10 +69,6 @@
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
 }
 
-.slider span {
-    color: #ff9900;
-}
-
 .slider hr {
     border: 0;
     height: 1px;
@@ -87,20 +85,10 @@
     animation-name: fade;
     animation-duration: 1.5s;
 }
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.8;
-        transform: scale(1.1, 1.1)
-    }
-    to {
-        opacity: 1;
-        transform: scale(1, 1)
-    }
-}
 @keyframes fade {
     from {
-        opacity: 0.8;
-        transform: scale(1.1, 1.1)
+        opacity: 0.9;
+        transform: scale(1.05, 1.05)
     }
     to {
         opacity: 1;

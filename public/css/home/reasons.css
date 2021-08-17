@@ -1,0 +1,75 @@
+.reasons-title{
+    text-align: center;
+}
+
+.gaonutosal {
+    float: left;
+}
+
+.pesontedan {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    width: 600px;
+}
+
+.pesontedan input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.pesontedan label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pesontedan-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .40s;
+    font-size: 14px;
+}
+
+.pesontedan-content {
+
+}
+.pesontedan-content p {
+    border-bottom: 1px solid #000000;
+}
+/* :checked */
+.pesontedan input:checked ~ .pesontedan-content {
+    max-height: 100vh;
+}
+
+/* Icon */
+.pesontedan label::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    -webkit-transition: all .40s;
+    -o-transition: all .40s;
+    transition: all .40s;
+    border-bottom: none;
+}
+.pesontedan input[type=checkbox] + label::after {
+    content: "+";
+}
+.pesontedan input[type=radio] + label::after {
+    content: "\25BC";
+}
+.pesontedan input[type=checkbox]:checked + label::after {
+    transform: rotate(315deg);
+}
+.pesontedan input[type=radio]:checked + label::after {
+    transform: rotateX(180deg);
+}

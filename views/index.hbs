@@ -2,7 +2,7 @@
     <div class="item">
         <img src="images/slider/1.jpg" alt="Первый слайд">
         <div class="slideText">
-            <span>Полный</span> цикл работ
+            <span class="title-color">Полный</span> цикл работ
             <hr>
             Производство металло конструкций
         </div>
@@ -11,7 +11,7 @@
     <div class="item">
         <img src="images/slider/2.jpg" alt="Второй слайд">
         <div class="slideText">
-            Полный цикл работ
+            <span class="title-color">Полный</span> цикл работ
             <hr>
             Производство металло конструкций
         </div>
@@ -20,7 +20,7 @@
     <div class="item">
         <img src="../images/slider/3.jpg" alt="Третий слайд">
         <div class="slideText">
-            Полный цикл работ
+            <span class="title-color">Полный</span> цикл работ
             <hr>
             Производство металло конструкций
         </div>
@@ -39,11 +39,9 @@
     </div>
 </div>
 
-
-
 <div class="about">
     <div class="container">
-        <h2 class="about-title">О <span>компании</span></h2>
+        <h2 class="about-title">О <span class="title-color">компании</span></h2>
         <div class="about-description">Что-то, и что-то еще</div>
         <div class="reasons">
             <div class="reason1"></div>
@@ -59,30 +57,57 @@
 
 <div class="product">
     <div class="container">
-        <h2 class="product-title"><span>Наша</span> продукция</h2>
-        <div class="product-wrapper">
-            <div class="products">
-                <div class="products-box">
-                    <div class="product-img"><img src="#" alt=""></div>
-                    <div class="product-subtitle">Продукт 1</div>
+        <h2 class="product-title"><span class="title-color">Наша</span> продукция</h2>
+        <div class="tab-wrapper">
+            <div class="tabs">
+                <div class="tab-description" id="content-1">
+                    Содержимое 1...
                 </div>
-                <div class="products-box">
-                    <div class="product-img"><img src="#" alt=""></div>
-                    <div class="product-subtitle">Продукт 2</div>
+                <div class="tab-description" id="content-2">
+                    Содержимое 2...
                 </div>
-                <div class="products-box">
-                    <div class="product-img"><img src="#" alt=""></div>
-                    <div class="product-subtitle">Продукт 3</div>
+                <div class="tab-description" id="content-3">
+                    Содержимое 3...
                 </div>
-                <div class="products-box">
-                    <div class="product-img"><img src="#" alt=""></div>
-                    <div class="product-subtitle">Продукт 4</div>
+
+<!--                привязать элемент к скролу-->
+
+                <div class="tabs__links">
+                    <a class="tab" href="#content-1">Вкладка 1</a>
+                    <a class="tab" href="#content-2">Вкладка 2</a>
+                    <a class="tab" href="#content-3">Вкладка 3</a>
                 </div>
             </div>
-            <div class="product-info">
-                <img src="" alt="">
-                <div class="product-description">
-                    description
+        </div>
+    </div>
+</div>
+
+<div class="reasons">
+    <div class="container">
+        <h2 class="reasons-title">Причины выбрать <span class="title-color">нас</span></h2>
+
+        <div class="navigaonusing">
+            <div class="gaonutosal">
+                <div class="pesontedan">
+                    <input id="pesontedan-one" type="checkbox" name="pesontedans">
+                    <label for="pesontedan-one">Первая причина</label>
+                    <div class="pesontedan-content">
+                        <p>Описание</p>
+                    </div>
+                </div>
+                <div class="pesontedan">
+                    <input id="pesontedan-two" type="checkbox" name="pesontedans">
+                    <label for="pesontedan-two">вторая причина</label>
+                    <div class="pesontedan-content">
+                        <p>Описание</p>
+                    </div>
+                </div>
+                <div class="pesontedan">
+                    <input id="pesontedan-three" type="checkbox" name="pesontedans">
+                    <label for="pesontedan-three">Третья причина</label>
+                    <div class="pesontedan-content">
+                        <p>Описание</p>
+                    </div>
                 </div>
             </div>
         </div>
