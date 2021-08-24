@@ -46,10 +46,12 @@
 .dropdown .menu-page::after {
     border-bottom: none;
 }
+
 .menu-page:hover::after {
     opacity: 1;
     transform: scale(1,1);
 }
+
 .active {
     color: #ff9900;
 }
@@ -68,15 +70,9 @@
     border-top: none;
 }
 
-.submenu:hover .dropdown {
-    border: 1px solid rgba(255, 153, 0, 0.8);
-}
-
 ul li:hover .submenu {
     transform: scaleY(1);
 }
-
-
 
 .submenu li {
     padding: 5px 0;
