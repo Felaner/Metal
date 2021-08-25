@@ -1,0 +1,19 @@
+.footer{
+    background-color: var(--gray);
+    height: 200px;
+}
+
+.footer-wrapper{
+    display: flex;
+}
+
+.footer-menu-items{
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-menu-page{
+    color: #FFFFFF;
+    font-size: 16px;
+    text-decoration: none;
+}
