@@ -19,10 +19,19 @@
 }
 
 .products-link{
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
     width: 260px;
     height: 400px;
     background: var(--gray);
+    margin-bottom: 75px;
+    transition: all 0.2s;
+}
+
+.products-link:hover{
+    transform: scale(1.1, 1.1);
+    border: 2px solid var(--orange);
 }
 
 .products-box{
@@ -35,6 +44,39 @@
     /*margin-bottom: 75px;*/
 }
 
+.products-img {
+    width: 100%;
+    height: 200px;
+}
+
 .products-name{
+    margin-top: 18px;
+    padding-top: 10px;
+    text-align: center;
     color: #fff;
+}
+
+.products-description {
+    margin-top: 18px;
+    padding: 5px 12px;
+    color: #fff;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18px;
+}
+
+.btn-card{
+    width: 100px;
+    height: 30px;
+    background: var(--orange);
+    border: none;
+    text-decoration: none;
+    color: #000;
+    line-height: 30px;
+    text-align: center;
+
 }
