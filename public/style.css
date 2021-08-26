@@ -13,9 +13,20 @@
     font-family: 'Chakra Petch', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+.wrapper {
+    position: relative;
+    min-height: calc(100vh - 228px);
+    padding-bottom: 228px;
 }
 
 .container {
