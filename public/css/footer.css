@@ -1,68 +1,69 @@
-.footer{
+.footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     background-color: var(--gray);
-    height: 200px;
 }
 
-.footer-wrapper{
+.footer-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 15px;
 }
 
-.footer-menu-logo{
+.footer-menu-logo {
 
 }
 
-.menu-logo{
+.menu-logo {
     width: 100px;
     height: 100px;
 }
 
-.footer-menu-items{
+.footer-menu-items {
     list-style: none;
     padding-left: 0;
 }
 
-.footer-menu-page{
+.footer-menu-page {
     color: #fff;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.4s;
 }
 
-.footer-menu-page:hover{
+.footer-menu-page:hover {
     color: var(--orange);
 }
 
-.footer-menu-item{
+.footer-menu-item {
 }
 
-.footer-contacts-phone{
+.footer-contacts-phone {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
-.footer-contacts-address{
+.footer-contacts-address {
     color: #fff;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.footer-politics{
+.footer-politics {
     margin-bottom: 15px;
 }
 
-.footer-politics-link{
+.footer-politics-link {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
-.footer-dev-link{
+.footer-dev-link {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
