@@ -1,16 +1,16 @@
 .about {
     z-index: 1;
-    background-color: black;
+    background-color: #FFFFFF;
     height: 500px;
-    border-top: 2px solid #ff9900;
-    border-bottom: 2px solid #ff9900;
+    border-top: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
 }
 
 .about-title {
-    font-size: 36px;
-    color: #FFFFFF;
+    font-size: var(--title);
+    color: #000000;
     text-align: center;
-    margin-top: 30px;
+    margin: 25px 0;
 }
 
 .about-description {

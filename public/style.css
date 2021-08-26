@@ -24,9 +24,12 @@ body {
 
 :root {
     --gray: #1d1c1c;
+    --orange: #ff9900;
+
+    --title: 36px;
 }
 
 span.title-color {
-    color: #ff9900;
+    color: var(--orange);
 }
 

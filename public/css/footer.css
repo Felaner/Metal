@@ -32,7 +32,7 @@
 }
 
 .footer-menu-page:hover{
-    color: #ff9900;
+    color: var(--orange);
 }
 
 .footer-menu-item{
