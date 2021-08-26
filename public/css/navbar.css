@@ -1,6 +1,7 @@
 .menu .container {
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 
 .menu {
@@ -144,7 +145,7 @@
 
 .submenu li a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #fff;
     transition: 0.4s;
     padding-left: 10px;
 }
