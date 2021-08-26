@@ -23,18 +23,68 @@
     width: 260px;
     height: 400px;
     background: var(--gray);
+    transition: all 0.2s;
+    margin-bottom: 25px;
+}
+
+.products-link:hover{
+    border: 2px solid var(--orange);
+    margin: 4px;
 }
 
 .products-box{
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*width: 400px;*/
-    /*height: 300px;*/
-    /*background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL");*/
-    /*margin-bottom: 75px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.products-img{
+    width: 100%;
+    height: 200px;
 }
 
 .products-name{
     color: #fff;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.products-description{
+    color: #fff;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.btn-link{
+    width: 100%;
+    height: 100%;
+    background: var(--orange);
+    color: #000;
+    margin-top: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-more{
+    width: 100px;
+    height: 30px;
+    background: var(--orange);
+    color: #000;
+    border: none;
+    margin-top: 8px;
+}
+
+.btn-card{
+    width: 100px;
+    height: 30px;
+    background: var(--orange);
+    color: #000;
+    border: none;
+    margin-top: 8px;
+}
+
+.btn-card-link{
+    width: 100px;
+    height: 30px;
 }
