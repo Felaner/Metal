@@ -1,3 +1,11 @@
+const form = document.querySelector('.form');
+const menu_btn = document.querySelector('.menu-contacts-btn');
+
+menu_btn.addEventListener('click', function () {
+    form.classList.add('form-visible')
+})
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
