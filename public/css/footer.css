@@ -5,6 +5,9 @@
 
 .footer-wrapper{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 15px;
 }
 
 .footer-menu-logo{
@@ -33,11 +36,36 @@
 }
 
 .footer-menu-item{
-    margin-top: 8px;
 }
 
 .footer-contacts-phone{
     color: #FFFFFF;
     text-decoration: none;
     font-size: 16px;
+    margin-bottom: 5px;
 }
+
+.footer-contacts-adress{
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-politics{
+    margin-bottom: 15px;
+}
+
+.footer-politics-link{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-dev-link{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
