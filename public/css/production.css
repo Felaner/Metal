@@ -2,12 +2,13 @@
     text-align: center;
     font-size: 30px;
     color: #000000;
+    margin: 0;
 }
 
 .products-subtitle{
     text-align: center;
     font-size: 24px;
-    color: #000000;
+    color: #000;
 }
 
 .products-wrapper{
@@ -17,16 +18,23 @@
     margin-top: 50px;
 }
 
+.products-link{
+    text-decoration: none;
+    width: 260px;
+    height: 400px;
+    background: var(--gray);
+}
+
 .products-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 300px;
-    background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL");
-    margin-bottom: 75px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*width: 400px;*/
+    /*height: 300px;*/
+    /*background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL");*/
+    /*margin-bottom: 75px;*/
 }
 
 .products-name{
-    color: var(--);
+    color: #fff;
 }
