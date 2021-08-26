@@ -1,9 +1,15 @@
-const form = document.querySelector('.form');
-const menu_btn = document.querySelector('.menu-contacts-btn');
+const form = document.querySelector('.form'),
+    menu_btn = document.querySelector('.menu-contacts-btn');
+    form_close = document.querySelector('.close');
+
 
 menu_btn.addEventListener('click', function () {
-    form.classList.add('form-visible')
-})
+    form.classList.add('form-visible');
+});
+
+form_close.addEventListener('click', function () {
+    form.classList.remove('form-visible');
+});
 
 
 let slideIndex = 1;

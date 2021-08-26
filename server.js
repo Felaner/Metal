@@ -16,6 +16,8 @@ const worksRoute = require('./routes/works');
 const newsRoute = require('./routes/news');
 const contactsRoute = require('./routes/contacts');
 
+const productRoute = require('./routes/product-page');
+
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs',
@@ -36,6 +38,8 @@ app.use('/production', productionRoute);
 app.use('/works', worksRoute);
 app.use('/news', newsRoute);
 app.use('/contacts', contactsRoute);
+
+app.use('/product-page', productRoute);
 
 const PORT = 3000;
 
