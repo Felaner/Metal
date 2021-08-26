@@ -1,0 +1,17 @@
+.products-title{
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+}
+
+.products-subtitle{
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+}
+
+.products-box{
+    width: 400px;
+    height: 400px;
+    background: url("");
+}
