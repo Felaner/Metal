@@ -1,12 +1,11 @@
 .product {
     background-color: var(--gray);
-    padding: 20px 0;
 }
 
 .product-title {
-    margin-top: 0;
+    margin: 25px 0;
     text-align: center;
-    font-size: 30px;
+    font-size: var(--title);
     color: #ffffff;
 }
 
@@ -22,14 +21,14 @@
     order: 0;
     white-space: nowrap;
     margin-bottom: 50px;
-    border: 2px solid #ff9900;
+    border: 2px solid var(--orange);
     /*box-shadow: 0 2px 4px 0 #e3f2fd;*/
 }
 
 .tabs__links>a {
     display: inline-block;
     text-decoration: none;
-    color: #ff9900;
+    color: var(--orange);
     text-align: center;
 }
 
@@ -61,7 +60,7 @@
     }
 
     .tabs__links>a {
-        border: 2px solid #ff9900;
+        border: 2px solid var(--orange);
         margin-bottom: 12px;
         display: flex;
         justify-content: center;
