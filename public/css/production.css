@@ -1,13 +1,13 @@
 .products-title{
     text-align: center;
     font-size: 30px;
-    color: #000000;
+    color: #000;
 }
 
 .products-subtitle{
     text-align: center;
     font-size: 24px;
-    color: #000000;
+    color: #000;
 }
 
 .products-wrapper{
@@ -28,5 +28,5 @@
 }
 
 .products-name{
-    color: var(--);
+    color: #fff;
 }

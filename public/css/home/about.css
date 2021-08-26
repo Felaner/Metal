@@ -1,19 +1,18 @@
 .about {
     z-index: 1;
-    background-color: #FFFFFF;
-    height: 500px;
+    background-color: #fff;
     border-top: 2px solid var(--orange);
     border-bottom: 2px solid var(--orange);
 }
 
 .about-title {
+    margin: 0;
     font-size: var(--title);
-    color: #000000;
+    color: #000;
     text-align: center;
-    margin: 25px 0;
 }
 
 .about-description {
-    color: #FFFFFF;
+    color: #000;
     margin: 0 100px;
 }

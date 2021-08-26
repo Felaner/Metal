@@ -1,6 +1,10 @@
 .slider .container {
     display: flex;
     justify-content: space-between;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .slider{
@@ -15,8 +19,8 @@
     object-fit: cover;
     width: 100%;
     height: 500px;
-    border: none !important;
-    box-shadow: none !important;
+    border: none;
+    box-shadow: none;
 }
 .slider .prev, .slider .next {
     cursor: pointer;
@@ -80,8 +84,6 @@
 }
 .slider .item {
     z-index: -1;
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }

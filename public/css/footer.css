@@ -25,7 +25,7 @@
 }
 
 .footer-menu-page{
-    color: #FFFFFF;
+    color: #fff;
     font-size: 16px;
     text-decoration: none;
     transition: all 0.4s;
@@ -39,14 +39,14 @@
 }
 
 .footer-contacts-phone{
-    color: #FFFFFF;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     margin-bottom: 5px;
 }
 
 .footer-contacts-address{
-    color: #FFFFFF;
+    color: #fff;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -57,13 +57,13 @@
 }
 
 .footer-politics-link{
-    color: #FFFFFF;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
 }
 
 .footer-dev-link{
-    color: #FFFFFF;
+    color: #fff;
     text-decoration: none;
     font-size: 16px;
     margin-top: 15px;
