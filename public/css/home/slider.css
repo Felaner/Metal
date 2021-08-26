@@ -8,7 +8,6 @@
 }
 
 .slider{
-    border-top: 2px solid var(--orange);
     max-width: 100%;
     position: relative;
     margin: auto;

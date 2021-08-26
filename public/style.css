@@ -1,13 +1,15 @@
 @import url('fonts/fonts.css');
+
 @import url('css/navbar.css');
+
 @import url('css/home.css');
 @import url('css/about.css');
+@import url('css/production.css');
 @import url('css/works.css');
 @import url('css/news.css');
 @import url('css/contacts.css');
+
 @import url('css/footer.css');
-@import url('css/home/reasons.css');
-@import url('css/production.css');
 
 * {
     font-family: 'Chakra Petch', sans-serif;

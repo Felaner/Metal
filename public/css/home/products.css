@@ -1,5 +1,6 @@
 .product {
     background-color: var(--gray);
+    border-bottom: 2px solid var(--orange);
 }
 
 .product-title {
