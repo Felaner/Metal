@@ -1,0 +1,12 @@
+{{#if registerError}}
+    <p class="alert">{{registerError}}</p>
+{{/if}}
+
+<form class="form-admin" method="POST">
+    <h2>Зарегистрироваться</h2>
+    <input id="email" name="email" type="email" class="validate" required placeholder="Email...">
+    <label for="email"></label>
+    <input id="password" name="password" type="password" class="validate" required placeholder="Пароль...">
+    <label for="password"></label>
+    <button type="submit">Зарегистрироваться</button>
+</form>

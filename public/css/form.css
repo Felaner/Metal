@@ -1,6 +1,20 @@
+.overlay {
+    transform: translate(0, -100%);
+    position: fixed;
+    z-index: 9;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.56);
+    transition: transform 1s;
+}
+
+.overlay-visible {
+    transform: translate(0, 0)
+}
+
 .form {
     position: fixed;
-    visibility: hidden;
+    z-index: 10;
     width: 340px;
     height: 440px;
     left: 50%;
@@ -10,12 +24,11 @@
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
     background-color: #e6e6e6;
-    transform: translate(-50%, -150%);
+    transform: translate(-50%, -200%);
     transition: transform 1s;
 }
 
 .form-visible {
-    visibility: visible;
     transform: translate(-50%,-50%)
 }
 
@@ -24,6 +37,11 @@
     position: absolute;
     font-size: 24px;
     right: 30px;
+    transition: color 0.4s;
+}
+
+.close:hover {
+    color: var(--orange)
 }
 
 .form h2 {
@@ -69,14 +87,15 @@
     background: var(--orange);
 }
 .form div {
-    content: "Hi";
     position: absolute;
     bottom: -15px;
     right: -20px;
-    background: #50505a;
+    background: var(--gray);
     color: #fff;
     width: 320px;
     padding: 16px 4px 16px 0;
+    border-bottom: 1px solid var(--orange);
+    border-right: 1px solid var(--orange);
     border-radius: 6px;
     font-size: 13px;
     box-shadow: 10px 10px 40px -14px #000;

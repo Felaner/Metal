@@ -1,0 +1,12 @@
+{{#if loginError}}
+    <p class="alert">{{loginError}}</p>
+{{/if}}
+
+<form class="form-admin" method="POST">
+    <h2>Войти в админку</h2>
+    <input id="email" name="email" type="email" class="validate" required placeholder="Email...">
+    <label for="email"></label>
+    <input id="password" name="password" type="password" class="validate" required placeholder="Пароль...">
+    <label for="password"></label>
+    <button type="submit">Войти</button>
+</form>
