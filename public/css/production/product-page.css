@@ -60,12 +60,17 @@
 .slider .next:hover {
     color: white;
 }
-.slider-dots {
+.product-slider-dots {
     position: absolute;
-    top: 95%;
+    top: 75%;
     width: 80%;
     text-align: center;
 }
+
+.product-slider-dots_item{
+    width: 150px;
+}
+
 .slider-dots_item{
     cursor: pointer;
     height: 4px;
@@ -76,8 +81,12 @@
     transition: background-color 0.6s ease;
 }
 .active-dot,
-.slider-dots_item:hover {
-    background-color: var(--orange);
+.product-slider-dots_item:hover {
+    border: 2px solid var(--orange);
+}
+
+.product-slider-dots-img{
+    width: 150px;
 }
 
 .slider .item {
