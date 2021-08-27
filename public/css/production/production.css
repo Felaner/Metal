@@ -26,12 +26,12 @@
     height: 400px;
     background: var(--gray);
     margin-bottom: 75px;
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 .products-link:hover{
     transform: scale(1.1, 1.1);
-    border: 2px solid var(--orange);
+    border: 1px solid var(--orange);
 }
 
 .products-box{
@@ -50,6 +50,7 @@
 }
 
 .products-name{
+    font-size: 20px;
     margin-top: 18px;
     padding-top: 10px;
     text-align: center;
@@ -78,5 +79,9 @@
     color: #000;
     line-height: 30px;
     text-align: center;
+    transition: all 0.4s;
+}
 
+.btn-card:hover{
+    background: #fff;
 }

@@ -1,0 +1,140 @@
+.breadcrumbs{
+    padding: 0px;
+}
+
+.breadcrumbs-item{
+    display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after{
+    content: '/';
+    margin: 0 5px;
+    color: #ccc;
+}
+
+.breadcrumbs-link{
+    color: #000;
+    text-decoration: none;
+}
+
+.slider .container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.slider{
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    height: 500px;
+}
+
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+    border: none;
+    box-shadow: none;
+}
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 48px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+}
+.slider .prev:hover,
+.slider .next:hover {
+    color: white;
+}
+.slider-dots {
+    position: absolute;
+    top: 95%;
+    width: 80%;
+    text-align: center;
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 4px;
+    width: 35px;
+    margin: 0 2px;
+    background-color: #fff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active-dot,
+.slider-dots_item:hover {
+    background-color: var(--orange);
+}
+
+.slider .item {
+    z-index: -1;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {
+        opacity: 0.9;
+        transform: scale(1.05, 1.05)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1, 1)
+    }
+}
+
+.product-page{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.slider-item-img{
+    width: 750px;
+    height: 450px;
+}
+
+.product-page-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.product-page-title{
+    font-size: 36px;
+}
+
+.product-page-description{
+    font-size: 30px;
+}
+
+.product-page-btn{
+    width: 200px;
+    height: 45px;
+    background: var(--orange);
+    border: none;
+    text-decoration: none;
+    color: #000;
+    line-height: 45px;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.product-page-btn:hover{
+    color: #fff;
+    background: #000;
+}
