@@ -25,7 +25,7 @@ router.get('/register', (req, res) => {
 router.post('/login', loginValidators, async (req, res) => {
     try {
         const {email} = req.body;
-        const candidate = await Admin.findOne({ email })
+        const candidate = await Admin.findOne({ where: { email: email } });
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             req.flash('loginError', errors.array()[0].msg);
@@ -57,6 +57,16 @@ router.post('/register', registerValidators, async (req, res, next) => {
             email, password: hashPassword
         });
         res.redirect('/auth/login');
+    } catch(e) {
+        console.log(e);
+    }
+});
+
+router.get('/logout', async (req, res) => {
+    try {
+        req.session.destroy(() => {
+            res.redirect('/')
+        })
     } catch(e) {
         console.log(e);
     }
