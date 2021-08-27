@@ -1,13 +1,21 @@
 const form = document.querySelector('.form'),
     menu_btn = document.querySelector('.menu-contacts-btn');
     form_close = document.querySelector('.close');
+    overlay = document.querySelector('.overlay');
 
 
 menu_btn.addEventListener('click', function () {
+    overlay.classList.add('overlay-visible');
     form.classList.add('form-visible');
 });
 
 form_close.addEventListener('click', function () {
+    overlay.classList.remove('overlay-visible');
+    form.classList.remove('form-visible');
+});
+
+overlay.addEventListener('click', function () {
+    overlay.classList.remove('overlay-visible');
     form.classList.remove('form-visible');
 });
 

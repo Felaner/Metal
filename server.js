@@ -1,6 +1,9 @@
 'use strict'
 
 const express = require('express');
+const session = require('express-session');
+const sequelize = require('./utils/database');
+const flash = require('connect-flash');
 const Handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
 const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
@@ -8,6 +11,8 @@ const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-ac
 const path = require('path');
 
 const app = express();
+
+const keys = require('./keys/keys');
 
 const homeRoute = require('./routes/home');
 const aboutRoute = require('./routes/about');
@@ -17,6 +22,10 @@ const newsRoute = require('./routes/news');
 const contactsRoute = require('./routes/contacts');
 
 const productRoute = require('./routes/product-page');
+
+const authRoute = require('./routes/auth');
+
+const errorHandler = require('./middleware/error');
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -32,6 +41,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.urlencoded({extended: true}));
 
+app.use(session({
+    secret: keys.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}));
+
+app.use(flash());
+
 app.use('/', homeRoute);
 app.use('/about', aboutRoute);
 app.use('/production', productionRoute);
@@ -41,10 +58,15 @@ app.use('/contacts', contactsRoute);
 
 app.use('/product-page', productRoute);
 
+app.use('/auth', authRoute);
+
+app.use(errorHandler);
+
 const PORT = 3000;
 
 async function start() {
     try {
+        await sequelize.sync()
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}...`);
         });

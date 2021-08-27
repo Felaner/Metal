@@ -12,6 +12,8 @@
 
 @import url('css/footer.css');
 
+@import url('css/admin.css');
+
 * {
     font-family: 'Chakra Petch', sans-serif;
 }
