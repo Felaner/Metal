@@ -24,7 +24,7 @@
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
     background-color: #e6e6e6;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -200vh);
     transition: transform 1s;
 }
 
