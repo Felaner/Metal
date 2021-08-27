@@ -23,7 +23,8 @@ const contactsRoute = require('./routes/contacts');
 
 const productRoute = require('./routes/product-page');
 
-const authRoute = require('./routes/auth');
+const loginRoute = require('./routes/login');
+const registerRoute = require('./routes/register');
 
 const errorHandler = require('./middleware/error');
 const varMiddleware = require('./middleware/variables');
@@ -61,7 +62,8 @@ app.use('/contacts', contactsRoute);
 
 app.use('/product-page', productRoute);
 
-app.use('/auth', authRoute);
+app.use('/admin', loginRoute);
+app.use('/admin-register', registerRoute);
 
 app.use(errorHandler);
 

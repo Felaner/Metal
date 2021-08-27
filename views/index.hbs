@@ -30,11 +30,9 @@
         <a class="next" onclick="plusSlide()">&#10095;</a>
 
         <div class="slider-dots">
-            {{#if sliderImages.length}}
-                {{#each sliderImages}}
-                    <span class="slider-dots_item" onclick="currentSlide({{sliderImages.length}})"></span>
-                {{/each}}
-            {{/if}}
+            <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+            <span class="slider-dots_item" onclick="currentSlide(3)"></span>
         </div>
     </div>
 </div>
