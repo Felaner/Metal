@@ -82,7 +82,7 @@
 }
 .active-dot,
 .product-slider-dots_item:hover {
-    border: 2px solid var(--orange);
+    background: var(--orange) ;
 }
 
 .product-slider-dots-img{
