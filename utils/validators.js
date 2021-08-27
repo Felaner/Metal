@@ -4,16 +4,15 @@ const bcrypt = require('bcryptjs');
 
 exports.registerValidators = [
     body('email')
-        .isEmail().withMessage('Invalid email')
+        .isEmail().withMessage('Не валидный Email')
         .custom(async (value, {req}) => {
-            const admin = await Admin.findOne({ email: value });
+            const admin = await Admin.findByPk(1);
             if (admin) {
-                return Promise.reject('Email already exists');
+                return Promise.reject('Администратор уже существует');
             }
-        })
-        .normalizeEmail(),
+        }),
     body('password')
-        .isLength({min: 6, max: 56}).withMessage('min lenght password: 6')
+        .isLength({min: 6, max: 56}).withMessage('Минимальная длина пароля: 6')
         .isAlphanumeric()
         .trim()
 ]
@@ -21,18 +20,18 @@ exports.registerValidators = [
 exports.loginValidators = [
     body('email')
         .custom(async (value, {req}) => {
-            const candidate = await Admin.findOne({ email: value });
+            const candidate = await Admin.findOne({ where: { email: value } });
             if (!candidate) {
-                return Promise.reject('Invalid email or password');
+                return Promise.reject('Неверный email или пароль');
             }
         }),
     body('password')
         .custom(async (value, {req}) => {
-            const {email} = req.body;
-            const candidate = await Admin.findOne({ email })
+            const { email } = req.body;
+            const candidate = await Admin.findOne({ where: { email: email } })
             const areSame = await bcrypt.compare(value, candidate.password);
             if (!areSame) {
-                throw new Error('Invalid email or password');
+                throw new Error('Неверный email или пароль');
             }
         })
 ]

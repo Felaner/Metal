@@ -12,7 +12,6 @@ router.get('/', (req, res) => {
         isHome: true,
         sliderImages
     });
-    console.log(req.session)
 });
 
 module.exports = router;

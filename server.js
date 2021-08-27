@@ -26,6 +26,7 @@ const productRoute = require('./routes/product-page');
 const authRoute = require('./routes/auth');
 
 const errorHandler = require('./middleware/error');
+const varMiddleware = require('./middleware/variables');
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -48,6 +49,8 @@ app.use(session({
 }));
 
 app.use(flash());
+
+app.use(varMiddleware)
 
 app.use('/', homeRoute);
 app.use('/about', aboutRoute);
