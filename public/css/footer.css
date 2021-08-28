@@ -8,8 +8,12 @@
 
 .footer-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+}
+
+.footer-wrapper > *{
+    margin: 0 30px;
 }
 
 .footer-menu-logo {
