@@ -1,0 +1,76 @@
+.add-title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.add-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-field-title{
+    height: 35px;
+    margin-bottom: 25px;
+}
+
+.add-input-title{
+    height: 35px;
+    width: 500px;
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.add-field-descr{
+    height: 95px;
+    margin-bottom: 25px;
+}
+
+.add-input-descr{
+    width: 500px;
+    height: 95px;
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.add-field-price{
+    height: 35px;
+    margin-bottom: 25px;
+}
+
+.add-input-price{
+    width: 500px;
+    height: 35px;
+    border: 2px solid #000;
+    padding: 5px;
+}
+
+.add-field-img{
+    height: 35px;
+    margin-bottom: 25px;
+}
+
+.add-input-img{
+    width: 500px;
+    height: 35px;
+    border: 2px solid #000;
+}
+
+.add-btn{
+    width: 120px;
+    height: 50px;
+    border: 2px solid #000;
+    background: #fff;
+    transition: 0.4s;
+}
+
+.add-btn:hover{
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+}
+
+.form-group{
+    padding:1em;
+    margin:1em;
+}

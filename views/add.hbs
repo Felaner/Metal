@@ -1,25 +1,28 @@
-<h1>Добавить новый товар</h1>
+<h2 class="add-title">Добавить новый товар</h2>
 
-<form action="/add" method="POST" novalidate>
-    <div class="input-field">
-        <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
-        <label for="title">Название товара</label>
-    </div>
+<div class="add-wrapper">
+    <form action="/add" method="POST" novalidate>
+        <div class="add-field-title">
+            <input id="title" name="title" type="text" class="add-input-title" required value="{{data.title}}" placeholder="Название товара...">
+            <label for="title"></label>
+        </div>
 
-    <div class="input-field">
-        <input id="descr" name="descr" type="text" class="validate" required value="{{data.descr}}">
-        <label for="descr">Описание товара</label>
-    </div>
+        <div class="add-field-descr">
+            <textarea id="descr" name="descr" type="text" class="add-input-descr" required value="{{data.descr}}" placeholder="Описание товара..."></textarea>
+            <label for="descr"></label>
+        </div>
 
-    <div class="input-field">
-        <input id="price" name="price" type="number" class="validate" required min="1" value="{{data.price}}">
-        <label for="price">Цена товара</label>
-    </div>
+        <div class="add-field-price">
+            <input id="price" name="price" type="number" class="add-input-price" required min="1" value="{{data.price}}" placeholder="Цена товара...">
+            <label for="price"></label>
+        </div>
 
-    <div class="input-field">
-        <input id="img" name="img" type="text" class="validate" required value="{{data.img}}">
-        <label for="img">URL картинки</label>
-    </div>
+        <div class="add-field-img">
+            <input id="img" name="img" type="file" class="add-input-img" required value="{{data.img}}" placeholder="URL картинки">
+            <label for="img"></label>
+        </div>
 
-    <button class="btn">Добавить товар</button>
-</form>
+        <button class="add-btn">Добавить товар</button>
+    </form>
+
+</div>
