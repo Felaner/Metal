@@ -1,0 +1,25 @@
+<h1>Добавить новый товар</h1>
+
+<form action="/add" method="POST" novalidate>
+    <div class="input-field">
+        <input id="title" name="title" type="text" class="validate" required value="{{data.title}}">
+        <label for="title">Название товара</label>
+    </div>
+
+    <div class="input-field">
+        <input id="descr" name="descr" type="text" class="validate" required value="{{data.descr}}">
+        <label for="descr">Описание товара</label>
+    </div>
+
+    <div class="input-field">
+        <input id="price" name="price" type="number" class="validate" required min="1" value="{{data.price}}">
+        <label for="price">Цена товара</label>
+    </div>
+
+    <div class="input-field">
+        <input id="img" name="img" type="text" class="validate" required value="{{data.img}}">
+        <label for="img">URL картинки</label>
+    </div>
+
+    <button class="btn">Добавить товар</button>
+</form>
