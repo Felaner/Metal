@@ -17,49 +17,28 @@
 
         </ul>
 
+        {{#if isAuth}}
+            <li class="add-product-li"><a class="add-product" href="/add">Добавить товар</a></li>
+        {{/if}}
+
         <h2 class="products-title"><span class="title-color">Наша</span> продукция</h2>
         <div class="products-subtitle">Подзаголовок</div>
         <div class="products-wrapper">
 
+        {{#if product.length}}
+            {{#each product}}
             <div class="products-link">
-                <img class="products-img" src="https://pampascorporation.com/wp-content/uploads/2019/09/shutterstock_577492282.jpg" alt="products">
-                <div class="products-name">Имя продукта</div>
-                <div class="products-description">Описание Описание Описание Описание Описание Описание Описание Описание </div>
+                <img class="products-img" src="{{img}}" alt="products">
+                <div class="products-name">{{title}}</div>
+                <div class="products-description">{{descr}}</div>
+                <div class="products-price">{{price}}</div>
                 <div class="btns">
                     <a class="btn-card" href="/product-page">Подробнее</a>
                     <a class="btn-card" href="#">Оформить</a>
                 </div>
             </div>
-
-            <a class="products-link" href="">
-                <div class="products-box">
-                    <div class="products-name">Продукт 1</div>
-                </div>
-            </a>
-
-            <a class="products-link" href="">
-                <div class="products-box">
-                    <div class="products-name">Продукт 1</div>
-                </div>
-            </a>
-
-            <a class="products-link" href="">
-                <div class="products-box">
-                    <div class="products-name">Продукт 1</div>
-                </div>
-            </a>
-
-            <a class="products-link" href="">
-                <div class="products-box">
-                    <div class="products-name">Продукт 1</div>
-                </div>
-            </a>
-
-            <a class="products-link" href="">
-                <div class="products-box">
-                    <div class="products-name">Продукт 1</div>
-                </div>
-            </a>
+            {{/each}}
+        {{/if}}
 
         </div>
     </div>
