@@ -21,7 +21,6 @@ const worksRoute = require('./routes/works');
 const newsRoute = require('./routes/news');
 const contactsRoute = require('./routes/contacts');
 
-const productRoute = require('./routes/product-page');
 const addRoute = require('./routes/add');
 
 const loginRoute = require('./routes/login');
@@ -61,7 +60,6 @@ app.use('/works', worksRoute);
 app.use('/news', newsRoute);
 app.use('/contacts', contactsRoute);
 
-app.use('/product-page', productRoute);
 app.use('/add', addRoute);
 
 app.use('/admin', loginRoute);

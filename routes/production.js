@@ -18,4 +18,17 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const product = await Product.findByPk(req.params.id);
+        res.render('product-page', {
+            layout: 'empty',
+            title: `${product.title}`,
+            product
+        });
+    } catch(e) {
+        console.dir(e)
+    }
+});
+
 module.exports = router;

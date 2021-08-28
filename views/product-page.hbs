@@ -1,18 +1,29 @@
 <div class="container">
     <div class="product-page">
 
+        <ul class="breadcrumbs">
+
+            <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="/">Главная</a>
+            </li>
+
+            <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="">Категория</a>
+            </li>
+
+            <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link disabled" href="">{{product.title}}</a>
+            </li>
+
+        </ul>
+
         <div class="slider">
-            <div class="item">
-                <img src="images/slider/1.jpg" alt="Первый слайд">
-            </div>
+            {{#each product.img}}
+                <div class="item">
+                    <img src="{{img}}" alt="Первый слайд">
+                </div>
+            {{/each}}
 
-            <div class="item">
-                <img src="images/slider/2.jpg" alt="Второй слайд">
-            </div>
-
-            <div class="item">
-                <img src="../images/slider/3.jpg" alt="Третий слайд">
-            </div>
             <div class="container">
                 <a class="prev" onclick="minusSlide()">&#10094;</a>
                 <a class="next" onclick="plusSlide()">&#10095;</a>
@@ -26,8 +37,9 @@
         </div>
 
         <div class="product-page-info">
-            <div class="product-page-title">Название товара</div>
-            <div class="product-page-description">Описание товара Описание товара Описание товара Описание товара Описание товара Описание товара Описание товара </div>
+            <div class="product-page-title">{{product.title}}</div>
+            <div class="product-page-description">{{product.descr}}</div>
+            <div class="product-page-price">{{product.price}}</div>
             <a class="product-page-btn" href="">Купить</a>
         </div>
     </div>
