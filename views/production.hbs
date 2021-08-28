@@ -27,16 +27,22 @@
 
         {{#if product.length}}
             {{#each product}}
-            <div class="products-link">
-                <img class="products-img" src="{{img}}" alt="products">
-                <div class="products-name">{{title}}</div>
-                <div class="products-description">{{descr}}</div>
-                <div class="products-price">{{price}}</div>
-                <div class="btns">
-                    <a class="btn-card" href="/product-page">Подробнее</a>
-                    <a class="btn-card" href="#">Оформить</a>
+                <div class="products-link">
+                    <div class="front">
+                        <img class="products-img" src="images/slider/1.jpg" alt="products">
+                        <div class="products-name">{{title}}</div>
+                        <div class="products-price">Стоимость: {{price}}</div>
+                    </div>
+                    <div class="back">
+                        <div class="products-name">{{title}}</div>
+                        <div class="products-description">{{descr}}</div>
+                        <div class="products-price">Стоимость: {{price}}</div>
+                        <div class="btns">
+                            <a class="btn-card" href="/product-page">Подробнее</a>
+                            <a class="btn-card" href="#">Оформить</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
             {{/each}}
         {{/if}}
 
