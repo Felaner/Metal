@@ -17,6 +17,11 @@
     text-decoration: none;
 }
 
+a.disabled {
+    cursor: default;
+    pointer-events: none;
+}
+
 .slider .container {
     display: flex;
     justify-content: space-between;
