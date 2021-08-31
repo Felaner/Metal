@@ -1,24 +1,44 @@
-.add-title{
-    text-align: center;
-    margin-top: 50px;
-    font-size: 36px;
+.add-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 25px;
 }
 
-.add-wrapper{
+.add {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 16px;
 }
 
-.add-input-title{
+.add > * {
+    width: 100%;
+}
+
+.add input, textarea {
+    width: 100%
+}
+
+.card-preview {
+    margin-top: 10vh;
+}
+
+.add-title {
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: var(--title);
+}
+
+.add-wrapper form > * {
+    margin-bottom: 15px;
+}
+
+.add-input-title {
     height: 35px;
-    width: 500px;
-    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
-    font-size: 22px;
     border-radius: 5px;
-    background-color: #f5f5f5;
 }
 
 .add-input-title:focus{
@@ -26,77 +46,60 @@
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-    background-color: #eee;
 }
 
-.add-input-shortdescr{
-    width: 500px;
+.add-input-short-description {
     height: 95px;
-    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     resize: none;
-    font-size: 22px;
     border-radius: 5px;
-    background-color: #f5f5f5;
 }
 
-.add-input-shortdescr:focus{
+.add-input-short-description:focus {
     color: #212529;
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-    background-color: #eee;
 }
 
-.add-input-description{
-    width: 500px;
+.add-input-description {
     height: 95px;
-    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     resize: none;
-    font-size: 22px;
     border-radius: 5px;
-    background-color: #f5f5f5;
 }
 
-.add-input-description:focus{
+.add-input-description:focus {
     color: #212529;
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-    background-color: #eee;
 }
 
-.add-input-price{
-    width: 500px;
+.add-input-price {
     height: 35px;
-    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
-    font-size: 22px;
     border-radius: 5px;
-    background-color: #f5f5f5;
 }
 
-.add-input-price:focus{
+.add-input-price:focus {
     color: #212529;
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-    background-color: #eee;
 }
 
-.add-field-img{
+.add-field-img {
     width: 100%;
     position: relative;
-    margin-bottom: 25px;
+    margin: 15px 0;
     text-align: center;
 }
 
-.add-input-img{
-    width: 500px;
+.add-input-img {
     height: 35px;
     border: 2px solid #000;
     opacity: 0;
@@ -104,7 +107,24 @@
     position: absolute;
 }
 
-.input-file-icon-wrapper{
+.add-btn {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 60px;
+    border: 2px solid #000;
+    background: #fff;
+    transition: 0.4s;
+    font-size: 18px;
+}
+
+.add-btn:hover{
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+}
+
+.input-file-icon-wrapper {
     height: 60px;
     width: 60px;
     margin-right: 15px;
@@ -150,16 +170,40 @@
     border: 2px solid #03a9f4;
 }
 
-.add-btn{
-    width: 120px;
-    height: 50px;
-    border: 2px solid #000;
-    background: #fff;
-    transition: 0.4s;
+.preview-img {
+    width: 100%;
+    height: 70%;
 }
 
-.add-btn:hover{
+.front .preview-title {
+    font-size: 20px;
+    height: 15%;
+    text-align: center;
     color: #fff;
-    background: #000;
-    cursor: pointer;
+    padding: 15px 15px 10px;
+}
+
+.back .preview-title {
+    padding-top: 10%;
+    font-size: 20px;
+    height: 5%;
+    text-align: center;
+    color: #fff;
+}
+
+.back .preview-descr {
+    padding: 15px 15px;
+    text-align: center;
+    height: 62%;
+}
+
+.front .preview-price {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.back .preview-price {
+    padding: 0 15px;
+    height: 10%;
+    text-align: center;
 }
