@@ -1,3 +1,9 @@
+.products-submenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .products-title{
     text-align: center;
     font-size: 30px;
@@ -15,7 +21,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin: 25px -5px 0;
 }
 
 .products-link{
@@ -25,7 +31,7 @@
     width: 260px;
     height: 400px;
     background: #fff;
-    margin-bottom: 75px;
+    margin-bottom: 35px;
     transition: all 0.4s;
     position: relative;
     perspective: 500px;
@@ -33,12 +39,12 @@
 
 .products-img {
     width: 100%;
-    height: 60%;
+    height: 70%;
 }
 
 .front .products-name {
     font-size: 20px;
-    height: 25%;
+    height: 15%;
     text-align: center;
     color: #fff;
     padding: 15px 15px 10px;
@@ -53,7 +59,7 @@
 }
 
 .back .products-description {
-    padding: 10px 15px;
+    padding: 15px 15px;
     text-align: center;
     height: 62%;
 }
@@ -97,11 +103,8 @@
 
 .add-product {
     display: block;
-    position: absolute;
     text-decoration: none;
     padding: 15px 15px;
-    right: 31.5vh;
-    top: 125px;
     text-align: center;
     background: none;
     cursor: pointer;
