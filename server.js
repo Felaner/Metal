@@ -28,6 +28,7 @@ const registerRoute = require('./routes/register');
 
 const errorHandler = require('./middleware/error');
 const varMiddleware = require('./middleware/variables');
+const fileMiddleware = require('./middleware/file');
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -49,8 +50,9 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use(flash());
+app.use(fileMiddleware.array('img', 3));
 
+app.use(flash());
 app.use(varMiddleware)
 
 app.use('/', homeRoute);

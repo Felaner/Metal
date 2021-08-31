@@ -1,5 +1,6 @@
 const {Router} = require('express');
-const Product = require('../models/Product');
+const Product = require('../models/product');
+const Image = require('../models/images');
 const auth = require('../middleware/auth');
 const router = Router();
 
@@ -15,20 +16,25 @@ router.post('/', auth, async (req, res) => {
         title: 'Добавить товар',
         isAdd: true,
         data: {
-            title: req.body.title,
-            descr: req.body.descr,
-            price: req.body.price,
-            img: req.body.img
+            title: '',
+            description: '',
+            price: '',
+            img: ''
         }
     })
     try {
         await Product.create({
             title: req.body.title,
-            descr: req.body.descr,
-            price: req.body.price,
-            img: req.body.img
+            description: req.body.description,
+            price: req.body.price
         });
-        res.redirect('/courses');
+        for(let i = 0; i < req.files.length; i++){
+            Image.create({
+                idProduct: req.body.title,
+                dir: 'images/products/' + req.files[i].filename
+            });
+        }
+        res.redirect('/add');
     } catch(e) {
         console.dir(e);
     }
