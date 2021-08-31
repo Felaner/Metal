@@ -10,17 +10,15 @@
     align-items: center;
 }
 
-.add-field-title{
-    margin-bottom: 25px;
-}
-
 .add-input-title{
     height: 35px;
     width: 500px;
+    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     font-size: 22px;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
 .add-input-title:focus{
@@ -28,20 +26,19 @@
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-}
-
-.add-field-shortdescr{
-    margin-bottom: 25px;
+    background-color: #eee;
 }
 
 .add-input-shortdescr{
     width: 500px;
     height: 95px;
+    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     resize: none;
     font-size: 22px;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
 .add-input-shortdescr:focus{
@@ -49,20 +46,19 @@
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-}
-
-.add-field-description{
-    margin-bottom: 25px;
+    background-color: #eee;
 }
 
 .add-input-description{
     width: 500px;
     height: 95px;
+    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     resize: none;
     font-size: 22px;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
 .add-input-description:focus{
@@ -70,19 +66,18 @@
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
-}
-
-.add-field-price{
-    margin-bottom: 25px;
+    background-color: #eee;
 }
 
 .add-input-price{
     width: 500px;
     height: 35px;
+    margin-bottom: 25px;
     border: 2px solid #000;
     padding: 5px;
     font-size: 22px;
     border-radius: 5px;
+    background-color: #f5f5f5;
 }
 
 .add-input-price:focus{
@@ -90,12 +85,13 @@
     outline: 0;
     border-radius: 5px;
     border: 2px solid #03a9f4;
+    background-color: #eee;
 }
 
 .add-field-img{
     width: 100%;
     position: relative;
-    margin: 15px 0;
+    margin-bottom: 25px;
     text-align: center;
 }
 
@@ -108,21 +104,7 @@
     position: absolute;
 }
 
-.add-btn{
-    width: 120px;
-    height: 50px;
-    border: 2px solid #000;
-    background: #fff;
-    transition: 0.4s;
-}
-
-.add-btn:hover{
-    color: #fff;
-    background: #000;
-    cursor: pointer;
-}
-
-.input-file-icon-wrapper {
+.input-file-icon-wrapper{
     height: 60px;
     width: 60px;
     margin-right: 15px;
@@ -166,4 +148,18 @@
 
 .input-file-button:hover{
     border: 2px solid #03a9f4;
+}
+
+.add-btn{
+    width: 120px;
+    height: 50px;
+    border: 2px solid #000;
+    background: #fff;
+    transition: 0.4s;
+}
+
+.add-btn:hover{
+    color: #fff;
+    background: #000;
+    cursor: pointer;
 }
