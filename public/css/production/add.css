@@ -1,6 +1,7 @@
 .add-title{
     text-align: center;
     margin-top: 50px;
+    font-size: 36px;
 }
 
 .add-wrapper{
@@ -10,7 +11,6 @@
 }
 
 .add-field-title{
-    height: 35px;
     margin-bottom: 25px;
 }
 
@@ -19,10 +19,39 @@
     width: 500px;
     border: 2px solid #000;
     padding: 5px;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.add-input-title:focus{
+    color: #212529;
+    outline: 0;
+    border-radius: 5px;
+    border: 2px solid #03a9f4;
+}
+
+.add-field-shortdescr{
+    margin-bottom: 25px;
+}
+
+.add-input-shortdescr{
+    width: 500px;
+    height: 95px;
+    border: 2px solid #000;
+    padding: 5px;
+    resize: none;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.add-input-shortdescr:focus{
+    color: #212529;
+    outline: 0;
+    border-radius: 5px;
+    border: 2px solid #03a9f4;
 }
 
 .add-field-description{
-    height: 95px;
     margin-bottom: 25px;
 }
 
@@ -32,10 +61,18 @@
     border: 2px solid #000;
     padding: 5px;
     resize: none;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.add-input-description:focus{
+    color: #212529;
+    outline: 0;
+    border-radius: 5px;
+    border: 2px solid #03a9f4;
 }
 
 .add-field-price{
-    height: 35px;
     margin-bottom: 25px;
 }
 
@@ -44,6 +81,15 @@
     height: 35px;
     border: 2px solid #000;
     padding: 5px;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.add-input-price:focus{
+    color: #212529;
+    outline: 0;
+    border-radius: 5px;
+    border: 2px solid #03a9f4;
 }
 
 .add-field-img{
@@ -116,4 +162,8 @@
     border-radius: 3px;
     cursor: pointer;
     border: 2px solid #000;
+}
+
+.input-file-button:hover{
+    border: 2px solid #03a9f4;
 }
