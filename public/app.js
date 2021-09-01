@@ -54,3 +54,32 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active-dot";
 }
+
+function myFunc(input) {
+
+    let files = input.files || input.currentTarget.files;
+
+    let reader = [];
+    let images = document.getElementById('images');
+    let name;
+    for (let i in files) {
+        if (files.hasOwnProperty(i)) {
+            name = 'file' + i;
+
+            reader[i] = new FileReader();
+            reader[i].readAsDataURL(input.files[i]);
+
+            images.innerHTML += '<li><img id="'+ name +'" src="" alt="'+ name +'" /></li>';
+
+            (function (name) {
+                reader[i].onload = function (e) {
+                    console.log(document.getElementById(name));
+                    document.getElementById(name).src = e.target.result;
+                };
+            })(name);
+
+
+            console.log(files[i]);
+        }
+    }
+}

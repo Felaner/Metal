@@ -51,7 +51,7 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use(fileMiddleware.array('img', 3));
+app.use(fileMiddleware.array('img', 4));
 
 app.use(flash());
 app.use(varMiddleware)

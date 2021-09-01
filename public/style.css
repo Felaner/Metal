@@ -64,3 +64,13 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 
+body::-webkit-scrollbar {
+    width: 5px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--gray);
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--orange);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+}
