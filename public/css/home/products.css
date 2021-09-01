@@ -86,7 +86,7 @@
     width: 350px;
     height: 200px;
     text-align: center;
-    background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL") ;
+    background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL") center center/cover no-repeat ;
 
 }
 .tab-description{
