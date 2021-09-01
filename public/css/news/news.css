@@ -1,1 +1,5 @@
-/*Что-то*/
+.news-submenu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
