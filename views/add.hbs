@@ -18,6 +18,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="images-box">
+            <ul id="images">
+
+            </ul>
+        </div>
+
         <div class="add">
             <h2 class="add-title">Добавить новый товар</h2>
 
@@ -29,8 +36,8 @@
                 </div>
 
                 <div class="add-field-short-description">
-                    <textarea id="short-description" name="short-description" oninput="previewdescr.innerHTML=this.value"  class="add-input-short-description" required placeholder="Краткое описание для карточки товара..."></textarea>
-                    <label for="short-description"></label>
+                    <textarea id="short-description" name="short_description" class="add-input-short-description"  oninput="previewdescr.innerHTML=this.value" required placeholder="Краткое описание для карточки товара..."></textarea>
+                    <label for="short_description"></label>
                 </div>
 
                 <div class="add-field-description">
@@ -52,10 +59,10 @@
                 <!--        </div>-->
 
                 <div class="add-field-img">
-                    <input name="img" type="file" id="img" class="add-input-img" multiple value="">
+                    <input name="img" type="file" id="img" class="add-input-img" onchange="myFunc(this)" multiple value="">
                     <label for="img" class="input-file-button">
                         <span class="input-file-icon-wrapper"><img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
-                        <span class="input-file-button-text">Выберите фотографии товара</span>
+                        <span class="input-file-button-text">Выберите изображения товара</span>
                     </label>
                 </div>
 

@@ -17,6 +17,7 @@ router.post('/', auth, async (req, res) => {
         isAdd: true,
         data: {
             title: '',
+            short_description: '',
             description: '',
             price: '',
             img: ''
@@ -25,10 +26,12 @@ router.post('/', auth, async (req, res) => {
     try {
         await Product.create({
             title: req.body.title,
+            short_description: req.body.short_description,
             description: req.body.description,
-            price: req.body.price
+            price: req.body.price,
+            preview: 'images/products/' + req.files[0].filename
         });
-        for(let i = 0; i < req.files.length; i++){
+        for(let i = 1; i < req.files.length; i++){
             Image.create({
                 idProduct: req.body.title,
                 dir: 'images/products/' + req.files[i].filename

@@ -1,7 +1,7 @@
 .add-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-bottom: 25px;
 }
 
@@ -17,11 +17,14 @@
 }
 
 .add input, textarea {
-    width: 100%
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .card-preview {
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .add-title {
@@ -146,7 +149,6 @@
 }
 
 .input-file-button {
-    width: 100%;
     max-width: 510px;
     height: 60px;
     color: #000;
@@ -206,4 +208,29 @@
     padding: 0 15px;
     height: 10%;
     text-align: center;
+}
+
+.images-box ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+.images-box li {
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.images-box img {
+    width: 100px;
+    height: 100px;
+    transition: 0.4s;
+}
+
+.images-box img:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    opacity: 0.5;
 }

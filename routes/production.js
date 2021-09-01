@@ -9,12 +9,10 @@ const Images = require('../models/images');
 router.get('/', async (req, res) => {
     try {
         const product = await Product.findAll();
-        const image = await Images.findAll();
         res.render('production', {
-            title: 'Наши продукция',
+            title: 'Наша продукция',
             isProduction: true,
-            product,
-            image
+            product
         });
     } catch (e) {
         console.dir(e)
@@ -24,10 +22,12 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const product = await Product.findByPk(req.params.id);
+        const image = await Images.findAll();
         res.render('product-page', {
             layout: 'empty',
             title: `${product.title}`,
-            product
+            product,
+            image
         });
     } catch(e) {
         console.dir(e)

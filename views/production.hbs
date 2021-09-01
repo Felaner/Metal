@@ -8,7 +8,7 @@
                 </li>
 
                 <li class="breadcrumbs-item">
-                    <a class="breadcrumbs-link" href="">Категория</a>
+                    <a class="breadcrumbs-link disabled" href="">Категория</a>
                 </li>
 
             </ul>
@@ -26,13 +26,13 @@
             {{#each product}}
                 <div class="products-link">
                     <div class="front">
-                        <img class="products-img" src="images/card.png" alt="products">
+                        <img class="products-img" src="{{preview}}" alt="products">
                         <div class="products-name">{{title}}</div>
                         <div class="products-price">Стоимость: {{price}}</div>
                     </div>
                     <div class="back">
                         <div class="products-name">{{title}}</div>
-                        <div class="products-description">{{description}}</div>
+                        <div class="products-description">{{short_description}}</div>
                         <div class="products-price">Стоимость: {{price}}</div>
                         <div class="btns">
                             <a class="btn-card" href="/production/{{id}}">Подробнее</a>
