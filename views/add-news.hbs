@@ -1,1 +1,27 @@
-<h2>Добавить новость</h2>
+<div class="container">
+    <h2 class="add-news-title">Добавить новость</h2>
+    <div class="add-news-rapper">
+
+        <div class="news-field-title">
+            <input id="title" name="title" type="text" class="news-input-title" required value="" placeholder="Заголовок новости...">
+            <label for="title"></label>
+            <p id="info1"></p>
+        </div>
+
+        <div class="news-field-description">
+            <textarea id="description" name="description" class="news-input-description" required placeholder="Текст новости..."></textarea>
+            <label for="description"></label>
+        </div>
+
+        <div class="news-field-img">
+            <input name="img" type="file" id="img" class="news-input-img" multiple value="">
+            <label for="img" class="input-file-button">
+                <span class="input-file-icon-wrapper"><img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
+                <span class="input-file-button-text">Выберите фотографии товара</span>
+            </label>
+        </div>
+
+        <button class="news-btn">Добавить новость</button>
+
+    </div>
+</div>
