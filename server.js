@@ -22,6 +22,7 @@ const newsRoute = require('./routes/news');
 const contactsRoute = require('./routes/contacts');
 
 const addRoute = require('./routes/add');
+const addnewsRoute = require('./routes/add-news')
 
 const loginRoute = require('./routes/login');
 const registerRoute = require('./routes/register');
@@ -63,6 +64,7 @@ app.use('/news', newsRoute);
 app.use('/contacts', contactsRoute);
 
 app.use('/add', addRoute);
+app.use('/add-news', addnewsRoute);
 
 app.use('/admin', loginRoute);
 app.use('/admin-register', registerRoute);

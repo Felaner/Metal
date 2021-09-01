@@ -1,3 +1,4 @@
+
 .news-title{
     text-align: center;
 }
@@ -14,6 +15,13 @@
     background-color: #000;
 }
 
-.news-info{
+.news-info {
     width: 500px;
+}
+
+.news-submenu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
 }

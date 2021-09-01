@@ -1,5 +1,26 @@
 <div class="container">
+
     <div class="news">
+
+        <div class="news-submenu">
+            <ul class="breadcrumbs">
+
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link" href="/">Главная</a>
+                </li>
+
+                <li class="breadcrumbs-item">
+                    <a class="breadcrumbs-link disabled" href="">Новости</a>
+                </li>
+
+            </ul>
+
+            {{#if isAuth}}
+                <li class="add-product-li"><a class="add-product" href="/add-news">Добавить новость</a></li>
+            {{/if}}
+
+        </div>
+
         <h2 class="news-title"><span class="title-color">Наши</span> новости</h2>
         <div class="news-wrapper">
             <div class="news-block">
@@ -63,4 +84,5 @@
             </div>
         </div>
     </div>
+
 </div>
