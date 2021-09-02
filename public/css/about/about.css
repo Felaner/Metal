@@ -1,8 +1,4 @@
-.about-page {
+.about {
+    padding: 20px 0;
     background-color: #fff;
-}
-
-.about-page-description {
-    color: #000;
-    margin: 0 100px;
 }

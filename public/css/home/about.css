@@ -1,19 +1,6 @@
-.about {
-    position: relative;
-    z-index: 1;
+.home-about {
+    padding: 20px 0;
     background-color: #fff;
     border-top: 2px solid var(--orange);
     border-bottom: 2px solid var(--orange);
-}
-
-.about-title {
-    margin: 0;
-    font-size: var(--title);
-    color: #000;
-    text-align: center;
-}
-
-.about-description {
-    color: #000;
-    margin: 0 100px;
 }

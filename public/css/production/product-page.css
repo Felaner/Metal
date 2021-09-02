@@ -1,22 +1,3 @@
-.breadcrumbs{
-    padding: 0px;
-}
-
-.breadcrumbs-item{
-    display: inline-block;
-}
-
-.breadcrumbs-item:not(:last-of-type)::after{
-    content: '/';
-    margin: 0 5px;
-    color: #ccc;
-}
-
-.breadcrumbs-link{
-    color: #000;
-    text-decoration: none;
-}
-
 a.disabled {
     cursor: default;
     pointer-events: none;

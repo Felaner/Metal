@@ -1,97 +1,24 @@
-.product {
+.home-production {
+    padding: 20px 0;
     background-color: var(--gray);
-    border-bottom: 2px solid var(--orange);
 }
 
-.product-title {
-    margin: 0;
-    text-align: center;
-    font-size: var(--title);
-    color: #fff;
+.home-production h2 {
+    color: #FFFFFF;
 }
 
-.tabs {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.home-production .tab-pane {
+    color: #FFFFFF;
 }
 
-.tabs__links {
-    display: flex;
-    flex-direction: row;
-    order: 0;
-    white-space: nowrap;
-    margin-bottom: 50px;
-    border: 2px solid var(--orange);
-    /*box-shadow: 0 2px 4px 0 #e3f2fd;*/
+.home-production a {
+    padding: 0;
 }
 
-.tabs__links>a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--orange);
-    text-align: center;
+.home-production .nav-tabs {
+    border-bottom: none;
 }
 
-.tabs__links>a:hover {
-    background-color: rgba(227, 242, 253, 0.3);
-}
-
-.tabs>#content-1:target~.tabs__links>a[href="#content-1"],
-.tabs>#content-2:target~.tabs__links>a[href="#content-2"],
-.tabs>#content-3:target~.tabs__links>a[href="#content-3"] {
-    border: 2px solid #fff;
-    cursor: pointer;
-}
-
-.tabs>div:not(.tabs__links) {
-    display: none;
-    order: 1;
-    flex-grow: 1;
-}
-    .tabs {
-        flex-direction: row;
-        margin-top: 100px;
-    }
-
-    .tabs__links {
-        flex-direction: column;
-        border: none;
-        box-shadow: none;
-    }
-
-    .tabs__links>a {
-        border: 2px solid var(--orange);
-        margin-bottom: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .tabs__links>a:last-child {
-        margin-bottom: 0;
-    }
-
-    .tabs>div:not(.tabs__links) {
-        padding-left: 15px;
-    }
-
-.tabs>div:target {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tab{
-    width: 350px;
-    height: 200px;
-    text-align: center;
-    background: url("https://avatars.mds.yandex.net/get-altay/492546/2a0000015efeea9379e5ee41d6be12ed6d64/XXL") center center/cover no-repeat ;
-
-}
-.tab-description{
-    background: #fff;
-    height: 636px;
-    width: 400px;
-    margin-left: 150px;
+.home-production .nav-item {
+    margin-bottom: 15px;
 }
