@@ -15,92 +15,67 @@
     </div>
 </form>
 
-<nav class="menu">
+<nav class="navbar navbar-expand-lg menu">
     <div class="container">
-        <div class="menu-logo">
-            <a class="menu-logo-href" href="/">
-                <img class="menu-logo-img" src="images/icons/logo.png" alt="logo">
+
+        <div class="col-3 text-center">
+            <a class="navbar-brand" href="/">
+                <img src="/images/icons/logo.png" width="100" height="100" alt="logo" loading="lazy">
             </a>
         </div>
-        <div class="menu-items-container">
-            <ul class="menu-contacts">
-                <li class="menu-contacts-item"><a href="#">+7(800)999-66-44</a></li>
-                <li class="menu-contacts-item"><a href="#">+7(800)999-66-44</a></li>
-                <li class="menu-contacts-item"><a href="#">+7(800)999-66-44</a></li>
-                <button class="menu-contacts-btn">Заказать звонок</button>
+
+        <div class="col">
+
+            <ul class="nav justify-content-between menu-contacts-items">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">+7(800)999-66-44</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">+7(800)999-66-44</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">+7(800)999-66-44</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link contact-btn">Заказать звонок</button>
+                </li>
             </ul>
-            <ul class="menu-items">
-                {{#if isHome}}
-                    <li class="menu-item">
-                        <a class="menu-page active" href="/">Главная</a>
-                    </li>
-                {{else}}
-                    <li class="menu-item">
-                        <a class="menu-page" href="/">Главная</a>
-                    </li>
-                {{/if}}
 
-                {{#if isAbout}}
-                    <li class="menu-item">
-                        <a class="menu-page active" href="/about">О компании</a>
-                    </li>
-                {{else}}
-                    <li class="menu-item">
-                        <a class="menu-page" href="/about">О компании</a>
-                    </li>
-                {{/if}}
+            <ul class="nav justify-content-between mt-1 menu-pages">
+                <li class="nav-item">
+                    <a class="nav-link {{#if isHome}}active{{/if}}" href="/">Главная</a>
+                </li>
 
-                {{#if isProduction}}
-                    <li class="menu-item dropdown">
-                        <a class="menu-page active" href="/production">Наша продукция</a>
-                        <ul class="submenu">
-                            <li><a href="">Item 1</a></li>
-                            <li><a href="">Item 2</a></li>
-                        </ul>
-                    </li>
-                {{else}}
-                    <li class="menu-item dropdown">
-                        <a class="menu-page" href="/production">Наша продукция</a>
-                        <ul class="submenu">
-                            <li><a href="">Item 1</a></li>
-                            <li><a href="">Item 2</a></li>
-                        </ul>
-                    </li>
-                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link {{#if isAbout}}active{{/if}}" href="/about">О компании</a>
+                </li>
 
-                {{#if isProjects}}
-                    <li class="menu-item">
-                        <a class="menu-page active" href="/works">Наши проекты</a>
-                    </li>
-                {{else}}
-                    <li class="menu-item">
-                        <a class="menu-page" href="/works">Наши проекты</a>
-                    </li>
-                {{/if}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link {{#if isProduction}}active{{/if}}" href="/production" id="navbarDropdown" aria-haspopup="true" aria-expanded="false">
+                        Наша продукция
+                    </a>
 
-                {{#if isNews}}
-                    <li class="menu-item">
-                        <a class="menu-page active" href="/news">Новости</a>
-                    </li>
-                {{else}}
-                    <li class="menu-item">
-                        <a class="menu-page" href="/news">Новости</a>
-                    </li>
-                {{/if}}
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Категория 1</a>
+                        <a class="dropdown-item" href="#">Категория 2</a>
+                    </div>
+                </li>
 
-                {{#if isContacts}}
-                    <li class="menu-item">
-                        <a class="menu-page active" href="/contacts">Контакты</a>
-                    </li>
-                {{else}}
-                    <li class="menu-item">
-                        <a class="menu-page" href="/contacts">Контакты</a>
-                    </li>
-                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link {{#if isProjects}}active{{/if}}" href="/works">Наши проекты</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{#if isNews}}active{{/if}}" href="/news">Новости</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{#if isContacts}}active{{/if}}" href="/contacts">Контакты</a>
+                </li>
             </ul>
         </div>
-        {{#if isAuth}}
-            <li><a class="logout" href="/admin/logout">Выйти</a></li>
-        {{/if}}
     </div>
 </nav>
+<!--    {{#if isAuth}}-->
+<!--        <li><a class="logout" href="/admin/logout">Выйти</a></li>-->
+<!--    {{/if}}-->

@@ -1,3 +1,4 @@
+@import url('bootstrap/css/bootstrap.min.css');
 @import url('fonts/fonts.css');
 
 @import url('css/navbar.css');
@@ -31,21 +32,12 @@ body {
 .wrapper {
     position: relative;
     min-height: calc(100vh - 228px);
-    padding-bottom: 228px;
-}
-
-.container {
-    height: 100%;
-    width: 1100px;
-    margin: 0 auto;
-    padding: 25px 0;
+    /*padding-bottom: 228px;*/
 }
 
 :root {
     --gray: #1d1c1c;
     --orange: #ff9900;
-
-    --title: 36px;
 }
 
 span.title-color {
@@ -73,4 +65,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: var(--orange);    /* цвет плашки */
     border-radius: 20px;       /* закругления плашки */
+}
+
+ul {
+    list-style: none;
 }

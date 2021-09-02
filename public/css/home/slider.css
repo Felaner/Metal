@@ -1,99 +1,11 @@
-.slider .container {
-    display: flex;
-    justify-content: space-between;
-    height: auto;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0;
-}
-
-.slider{
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-    height: 500px;
-}
-
-.slider .item img, .slider .item video {
-    object-fit: cover;
-    width: 100%;
-    height: 500px;
-    border: none;
-    box-shadow: none;
-}
-
-.slider .prev, .slider .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
+.carousel .carousel-control-prev, .carousel .carousel-control-next {
     color: var(--orange);
     font-weight: bold;
     font-size: 48px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
 }
-.slider .next {
-    right: 10%;
-    border-radius: 3px 0 0 3px;
-}
-.slider .prev:hover,
-.slider .next:hover {
-    color: white;
-}
-.slider-dots {
-    position: absolute;
-    top: 95%;
-    width: 80%;
-    text-align: center;
-}
-.slider-dots_item{
-    cursor: pointer;
-    height: 4px;
-    width: 35px;
-    margin: 0 2px;
-    background-color: #fff;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active-dot,
-.slider-dots_item:hover {
-    background-color: var(--orange);
-}
-.slideText {
-    font-weight: 300;
-    text-align: center;
-    position: absolute;
-    color: #fff;
-    font-size: var(--title);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
-}
 
-.slider hr {
-    border: 0;
-    height: 1px;
-    background: var(--orange);
-    background-image: -webkit-linear-gradient(left, #fff, var(--orange), #fff);
-    background-image: -moz-linear-gradient(left, #fff, var(--orange), #fff);
-    background-image: -ms-linear-gradient(left, #fff, var(--orange), #fff);
-    background-image: -o-linear-gradient(left, #fff, var(--orange), #fff);
-}
-.slider .item {
-    z-index: -1;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from {
-        opacity: 0.9;
-        transform: scale(1.05, 1.05)
-    }
-    to {
-        opacity: 1;
-        transform: scale(1, 1)
-    }
+.carousel-indicators li {
+    background-color: var(--orange);
 }

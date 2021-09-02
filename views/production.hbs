@@ -1,48 +1,61 @@
 <div class="container">
-    <div class="products">
-        <div class="products-submenu">
+    <div class="products col-12">
+        <div class="row position-absolute">
             <ul class="breadcrumbs">
 
                 <li class="breadcrumbs-item">
-                    <a class="breadcrumbs-link" href="/">Главная</a>
+                    <a class="breadcrumbs-link" href="/">Компания</a>
                 </li>
 
                 <li class="breadcrumbs-item">
-                    <a class="breadcrumbs-link disabled" href="">Категория</a>
+                    <a class="breadcrumbs-link disabled" href="">Продукция</a>
                 </li>
 
             </ul>
-
-            {{#if isAuth}}
-                <li class="add-product-li"><a class="add-product" href="/add">Добавить товар</a></li>
-            {{/if}}
         </div>
 
-        <h2 class="products-title"><span class="title-color">Наша</span> продукция</h2>
-        <div class="products-subtitle">Подзаголовок</div>
-        <div class="products-wrapper">
-
+        <div class="row justify-content-center mb-3">
+            <h2><span class="title-color">Наша</span> продукция</h2>
+        </div>
+        <div class="row justify-content-center">
         {{#if product.length}}
             {{#each product}}
-                <div class="products-link">
-                    <div class="front">
-                        <img class="products-img" src="{{preview}}" alt="products">
-                        <div class="products-name">{{title}}</div>
-                        <div class="products-price">Стоимость: {{price}}</div>
-                    </div>
-                    <div class="back">
-                        <div class="products-name">{{title}}</div>
-                        <div class="products-description">{{short_description}}</div>
-                        <div class="products-price">Стоимость: {{price}}</div>
-                        <div class="btns">
-                            <a class="btn-card" href="/production/{{id}}">Подробнее</a>
-                            <a class="btn-card" href="#">Оформить</a>
+                <div class="col-3 mr-5 products-link mb-5">
+                    <div class="front card">
+                        <img class="card-img-top" src="{{preview}}" alt="products" width="100%" height="70%">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">{{title}}</h3>
                         </div>
+                        <div class="card-footer">
+                            <p class="text-center">Стоимость: {{price}} руб.</p>
+                        </div>
+                    </div>
+                    <div class="back card">
+                        <div class="card-title">
+
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title text-center">{{title}}</h3>
+                            <p class="card-text">{{short_description}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="text-center">Стоимость: {{price}} руб.</p>
+                            <div class="row justify-content-around">
+                                <a class="btn-card" href="/production/{{id}}">Подробнее</a>
+                                <a class="btn-card" href="#">Оформить</a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             {{/each}}
         {{/if}}
-
         </div>
     </div>
 </div>
+
+
+
+<!--{{#if isAuth}}-->
+<!--    <li class="add-product-li"><a class="add-product" href="/add">Добавить товар</a></li>-->
+<!--{{/if}}-->
