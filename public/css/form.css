@@ -1,58 +1,28 @@
-.overlay {
-    transform: translate(0, -100%);
-    position: fixed;
-    z-index: 9;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0,0,0,.56);
-    transition: transform 1s;
-}
-
-.overlay-visible {
-    transform: translate(0, 0)
-}
-
-.form {
-    position: fixed;
-    z-index: 10;
+.modal-form {
     width: 340px;
-    height: 440px;
-    left: 50%;
-    top: 50%;
+    height: 340px;
     padding: 20px 30px;
     border: 2px solid var(--orange);
     border-radius: 8px;
     box-shadow: 0 0 40px -10px #000;
     background-color: #e6e6e6;
-    transform: translate(-50%, -200vh);
-    transition: transform 1s;
 }
 
-.form-visible {
-    transform: translate(-50%,-50%)
+.modal-dialog {
+    text-align: -webkit-center;
 }
 
-.close {
-    cursor: pointer;
-    position: absolute;
+.modal-header .close {
+    padding: 0;
     font-size: 24px;
-    right: 30px;
     transition: color 0.4s;
 }
 
-.close:hover {
+.modal-header .close:hover {
     color: var(--orange)
 }
 
-.form h2 {
-    margin: 10px 0;
-    padding-bottom: 10px;
-    width: 180px;
-    color: var(--gray);
-    border-bottom: 3px solid var(--gray);
-}
-
-.form input {
+.modal-form input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -64,29 +34,27 @@
     border-bottom: 2px solid var(--gray);
 }
 
-.form input:focus {
+.modal-form input:focus {
     border-bottom: 2px solid var(--orange);
 }
 
-.form button {
-    float: right;
-    padding: 8px 12px;
-    margin: 8px 0 0;
+.modal-form .modal-footer button {
     border: 1px solid var(--gray);
+    padding: 5px 10px;
     border-radius: 3px;
     background: 0;
     font-size: 16px;
     font-weight: 500;
     color: var(--orange);
-    cursor: pointer;
     transition: all 0.4s;
 }
-.form button:hover {
+.modal-form .modal-footer button:hover {
     border: 1px solid #000;
     color: #000;
     background: var(--orange);
 }
-.form div {
+
+.modal-form .modal-decor {
     position: absolute;
     bottom: -15px;
     right: -20px;
@@ -100,6 +68,6 @@
     font-size: 13px;
     box-shadow: 10px 10px 40px -14px #000;
 }
-.form div span {
+.modal-form .modal-decor span {
     margin: 0 5px 0 15px;
 }

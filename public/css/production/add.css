@@ -1,107 +1,6 @@
-.add-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-bottom: 25px;
-}
-
 .add {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 16px;
+    padding: 20px 0;
 }
-
-.add > * {
-    width: 100%;
-}
-
-.add input, textarea {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.card-preview {
-    margin-top: 10vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.add-title {
-    margin: 0 0 15px;
-    text-align: center;
-    font-size: var(--title);
-}
-
-.add-wrapper form > * {
-    margin-bottom: 15px;
-}
-
-.add-input-title {
-    height: 35px;
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.add-input-title:focus{
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.add-input-short-description {
-    height: 95px;
-    border: 2px solid #000;
-    padding: 5px;
-    resize: none;
-    border-radius: 5px;
-}
-
-.add-input-short-description:focus {
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.add-input-description {
-    height: 95px;
-    border: 2px solid #000;
-    padding: 5px;
-    resize: none;
-    border-radius: 5px;
-}
-
-.add-input-description:focus {
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.add-input-price {
-    height: 35px;
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.add-input-price:focus {
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.add-field-img {
-    width: 100%;
-    position: relative;
-    margin: 15px 0;
-    text-align: center;
-}
-
 .add-input-img {
     height: 35px;
     border: 2px solid #000;
@@ -109,36 +8,13 @@
     visibility: hidden;
     position: absolute;
 }
-
-.add-btn {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: 60px;
-    border: 2px solid #000;
-    background: #fff;
-    transition: 0.4s;
-    font-size: 18px;
-}
-
-.add-btn:hover{
-    color: #fff;
-    background: #000;
-    cursor: pointer;
-}
-
 .input-file-icon-wrapper {
     height: 60px;
     width: 60px;
-    margin-right: 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     border-right: 1px solid #fff;
 }
@@ -157,80 +33,55 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
     border-radius: 3px;
     cursor: pointer;
     border: 2px solid #000;
-}
-
-.input-file-button:hover{
-    border: 2px solid #03a9f4;
-}
-
-.preview-img {
-    width: 100%;
-    height: 70%;
-}
-
-.front .preview-title {
-    font-size: 20px;
-    height: 15%;
-    text-align: center;
-    color: #fff;
-    padding: 15px 15px 10px;
-}
-
-.back .preview-title {
-    padding-top: 10%;
-    font-size: 20px;
-    height: 5%;
-    text-align: center;
-    color: #fff;
-}
-
-.back .preview-descr {
-    padding: 15px 15px;
-    text-align: center;
-    height: 62%;
-}
-
-.front .preview-price {
-    padding: 0 15px;
-    text-align: center;
-}
-
-.back .preview-price {
-    padding: 0 15px;
-    height: 10%;
-    text-align: center;
-}
-
-.images-box ul {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-}
-
-.images-box li {
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-.images-box img {
-    width: 100px;
-    height: 100px;
     transition: 0.4s;
 }
 
-.images-box img:hover {
+.input-file-button:hover{
+    border: 2px solid var(--orange);
+}
+
+.form-control:focus {
+    border: 1px solid var(--orange);
+    box-shadow: unset;
+}
+
+.add .news-btn:hover {
+    color: #000;
+    background-color: unset;
+    border: 2px solid var(--orange);
+}
+
+#images {
+    padding: 0;
+}
+
+#images li {
+    display: inline-block;
+}
+
+#images label {
+    width: 200px;
+    height: 130px;
+    display: block;
+    position: relative;
+}
+
+#images input, #images span {
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
+}
+
+#images input:checked + span  	{
+    border: 2px solid var(--orange);
     transform: scale(1.1, 1.1);
-    opacity: 0.5;
 }

@@ -31,8 +31,11 @@ body {
 
 .wrapper {
     position: relative;
-    min-height: calc(100vh - 228px);
-    /*padding-bottom: 228px;*/
+    min-height: calc(100vh - 216px);
+}
+
+button {
+    border: unset;
 }
 
 :root {

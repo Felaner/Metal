@@ -35,3 +35,11 @@ exports.loginValidators = [
             }
         })
 ]
+
+exports.productValidators = [
+    body('title').isLength({min: 1}).withMessage('Введите наименование товара').trim(),
+    body('price').isNumeric().withMessage('Введите стоимость товара').trim(),
+    body('short_description').isLength({min: 1}).withMessage('Введите краткое описание').trim(),
+    body('description').isLength({min: 1}).withMessage('Введите описание').trim(),
+    body('checkedImage').notEmpty().withMessage('Выберите хотя бы одно изображение для карточки')
+]
