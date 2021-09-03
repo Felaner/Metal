@@ -14,7 +14,7 @@ function myFunc(input) {
             reader[i] = new FileReader();
             reader[i].readAsDataURL(input.files[i]);
 
-            images.innerHTML += '<li><label><input id="' + name + '" name="checkedImage" type="radio" style="" required/><span id="' + name2 + '" style=""></span></label></li>';
+            images.innerHTML += '<li><label><input id="' + name + '" name="checkedImage" type="radio" onclick="a(this)" required/><span id="' + name2 + '" style=""></span></label></li>';
 
             (function (name, name2) {
                 reader[i].onload = function (e) {
@@ -22,20 +22,17 @@ function myFunc(input) {
                         spanCheck = document.getElementById(name2);
                     let inputCheckStyle = inputCheck.style,
                         spanCheckStyle = spanCheck.style;
-                    console.log(inputCheckStyle)
-                    console.log(spanCheckStyle)
                     inputCheckStyle.background = 'url(' + e.target.result + ') no-repeat';
-                    inputCheckStyle.backgroundSize = '100% 100%'
+                    inputCheckStyle.backgroundSize = '100% 100%';
                     spanCheckStyle.background = 'url(' + e.target.result + ') no-repeat';
-                    spanCheckStyle.backgroundSize = '100% 100%'
+                    spanCheckStyle.backgroundSize = '100% 100%';
                 };
-                let previewimg = document.getElementById('previewimg');
-                let checkedImages = document.getElementsByTagName('input[name="checkedImage"]');
             })(name, name2);
         }
     }
 }
 
-checkedImages.addEventListener('click', function () {
-    previewimg.src = this.style.background
-});
+function a(input) {
+    let previewImage = document.getElementById('previewimg');
+    previewImage.src = input.style.background.slice(5, -30)
+}
