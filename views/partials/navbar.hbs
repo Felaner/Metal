@@ -1,19 +1,32 @@
-<div class="overlay"></div>
-<form class="form" method="post">
-    <span class="close">&#10008;</span>
-    <h2>Контакт с нами</h2>
-    <label for="name">
-        <input name="name" placeholder="Ваше имя...">
-    </label>
-    <label for="tel">
-        <input name="tel" placeholder="Ваш телефон...">
-    </label>
-    <button type="submit">Заказать звонок</button>
-    <div>
-        <span class="fa fa-phone"></span>+7(800)999-66-44
-        <span class="fa fa-envelope-o"></span> email@email.com
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog justify-content-center" role="document">
+        <div class="modal-content modal-form">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Контакт с нами</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&#10008;</span>
+                </button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <label for="name">
+                        <input name="name" placeholder="Ваше имя...">
+                    </label>
+                    <label for="tel">
+                        <input name="tel" placeholder="Ваш телефон...">
+                    </label>
+                </div>
+                <div class="modal-footer mt-4">
+                    <button type="submit">Заказать звонок</button>
+                </div>
+                <div class="modal-decor">
+                    <span class="fa fa-phone"></span>+7(800)999-66-44
+                    <span class="fa fa-envelope-o"></span> email@email.com
+                </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
 
 <nav class="navbar navbar-expand-lg menu">
     <div class="container">
@@ -37,7 +50,7 @@
                     <a class="nav-link" href="#">+7(800)999-66-44</a>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link contact-btn">Заказать звонок</button>
+                    <button type="button" class="nav-link contact-btn" data-toggle="modal" data-target="#formModal">Заказать звонок</button>
                 </li>
             </ul>
 
@@ -74,8 +87,8 @@
                 </li>
             </ul>
         </div>
+        {{#if isAuth}}
+            <li><a class="logout" href="/admin/logout">Выйти</a></li>
+        {{/if}}
     </div>
 </nav>
-<!--    {{#if isAuth}}-->
-<!--        <li><a class="logout" href="/admin/logout">Выйти</a></li>-->
-<!--    {{/if}}-->

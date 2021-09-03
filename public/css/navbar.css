@@ -93,26 +93,27 @@ nav.navbar .dropdown:hover > .dropdown-menu {
     background-color: var(--gray);
 }
 
-/*.logout {*/
-/*    display: block;*/
-/*    position: absolute;*/
-/*    text-decoration: none;*/
-/*    padding: 15px 15px;*/
-/*    text-align: center;*/
-/*    right: 20px;*/
-/*    top: 21px;*/
-/*    background: none;*/
-/*    cursor: pointer;*/
-/*    border: 1px solid #fff;*/
-/*    border-radius: 3px;*/
-/*    color: var(--orange);*/
-/*    font-size: 16px;*/
-/*    font-weight: 500;*/
-/*    transition: all 0.4s;*/
-/*}*/
+.logout {
+    display: block;
+    position: absolute;
+    text-decoration: none;
+    padding: 15px 15px;
+    text-align: center;
+    right: 20px;
+    top: 21px;
+    background: none;
+    cursor: pointer;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: var(--orange);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
 
-/*.logout:hover {*/
-/*    border: 1px solid #000;*/
-/*    color: #000;*/
-/*    background: var(--orange);*/
-/*}*/
+.logout:hover {
+    text-decoration: none;
+    border: 1px solid #000;
+    color: #000;
+    background: var(--orange);
+}

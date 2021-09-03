@@ -1,7 +1,9 @@
 const {Router} = require('express');
+const {validationResult} = require('express-validator');
 const Product = require('../models/product');
 const Image = require('../models/images');
 const auth = require('../middleware/auth');
+const { productValidators } = require('../utils/validators');
 const router = Router();
 
 router.get('/', auth, (req, res) => {
@@ -11,18 +13,21 @@ router.get('/', auth, (req, res) => {
     });
 });
 
-router.post('/', auth, async (req, res) => {
-    res.status(422).render('add',{
-        title: 'Добавить товар',
-        isAdd: true,
-        data: {
-            title: '',
-            short_description: '',
-            description: '',
-            price: '',
-            img: ''
-        }
-    })
+router.post('/', auth, productValidators, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).render('add', {
+            title: 'Добавить товар',
+            isAdd: true,
+            error: errors.array()[0].msg,
+            data: {
+                title: req.body.title,
+                price: req.body.price,
+                short_description: req.body.short_description,
+                description: req.body.description
+            }
+        })
+    }
     try {
         await Product.create({
             title: req.body.title,

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="products col-12">
-        <div class="row position-absolute">
+        <div class="row position-absolute justify-content-between" style="width: 100%">
             <ul class="breadcrumbs">
 
                 <li class="breadcrumbs-item">
@@ -12,6 +12,11 @@
                 </li>
 
             </ul>
+            {{#if isAuth}}
+                <li class="add-product-li">
+                    <a class="add-product" href="/add">Добавить товар</a>
+                </li>
+            {{/if}}
         </div>
 
         <div class="row justify-content-center mb-3">
@@ -31,9 +36,6 @@
                         </div>
                     </div>
                     <div class="back card">
-                        <div class="card-title">
-
-                        </div>
                         <div class="card-body">
                             <h3 class="card-title text-center">{{title}}</h3>
                             <p class="card-text">{{short_description}}</p>
@@ -53,9 +55,3 @@
         </div>
     </div>
 </div>
-
-
-
-<!--{{#if isAuth}}-->
-<!--    <li class="add-product-li"><a class="add-product" href="/add">Добавить товар</a></li>-->
-<!--{{/if}}-->

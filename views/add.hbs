@@ -1,67 +1,126 @@
 <div class="container">
-    <div class="add-wrapper">
-        <div class="card-preview">
-            <div class="products-link">
-                <div class="front">
-                    <img class="preview-img" src="images/card.png" alt="products">
-                    <div id="pretitle1" class="preview-title"></div>
-                    <div class="preview-price">Стоимость: <span id="preprice1"></span> руб.</div>
+    {{#if error}}
+    <div class="row">
+        <p class="alert">{{error}}</p>
+    </div>
+    {{/if}}
+    <div class="add row justify-content-around">
+        <div class="col-3 products-link mt-5">
+            <div class="front card">
+                <img id="previewimg" class="card-img-top" alt="products" width="100%" height="70%">
+                <div class="card-body">
+                    <h3 id="pretitle1" class="card-title text-center"></h3>
                 </div>
-                <div class="back">
-                    <div id="pretitle2" class="preview-title"></div>
-                    <div id="previewdescr" class="preview-descr"></div>
-                    <div class="preview-price">Стоимость: <span id="preprice2"></span> руб.</div>
-                    <div class="btns">
-                        <a class="btn-card" href="/production/{{id}}">Подробнее</a>
+                <div class="card-footer">
+                    <p class="text-center">Стоимость: <span id="preprice1"></span> руб.</p>
+                </div>
+            </div>
+            <div class="back card">
+                <div class="card-body">
+                    <h3 id="pretitle2" class="card-title text-center"></h3>
+                    <p id="previewdescr" class="card-text"></p>
+                </div>
+                <div class="card-footer">
+                    <p class="text-center">Стоимость: <span id="preprice2"></span> руб.</p>
+                    <div class="row justify-content-around">
+                        <a class="btn-card" href="#">Подробнее</a>
                         <a class="btn-card" href="#">Оформить</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="images-box">
-<!--            <h2>Выбрать изображение для карточки товара</h2>-->
-            <ul id="images">
-
-            </ul>
+        <div class="col-auto">
         </div>
 
-        <div class="add">
-            <h2 class="add-title">Добавить новый товар</h2>
+        <div class="col offset-1">
+            <div class="row justify-content-center">
+                <h3>Добавить новый товар</h3>
+            </div>
+            <div class="col-12">
+                <form action="/add" method="POST" enctype="multipart/form-data" novalidate>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-5">
+                            <label for="title"></label>
+                            <input
+                                    id="title"
+                                    name="title"
+                                    oninput="pretitle1.innerHTML = this.value; pretitle2.innerHTML = this.value"
+                                    type="text"
+                                    class="form-control"
+                                    required
+                                    value="{{data.title}}"
+                                    placeholder="Название товара..."
+                                    style="width: 100%">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="price"></label>
+                            <input
+                                    id="price"
+                                    name="price"
+                                    type="number"
+                                    oninput="preprice1.innerHTML = this.value; preprice2.innerHTML = this.value"
+                                    class="form-control"
+                                    required
+                                    min="1"
+                                    value="{{data.price}}"
+                                    placeholder="Цена товара..."
+                                    style="width: 100%">
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-10">
+                            <label for="short_description"></label>
+                            <textarea
+                                    id="short-description"
+                                    name="short_description"
+                                    class="form-control"
+                                    oninput="previewdescr.innerHTML=this.value"
+                                    required
+                                    placeholder="Краткое описание для карточки товара..."
+                                    style="width: 100%">{{data.short_description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-10">
+                            <label for="description"></label>
+                            <textarea
+                                    id="description"
+                                    name="description"
+                                    class="form-control"
+                                    required
+                                    placeholder="Описание для страницы товара..."
+                                    style="width: 100%">{{data.description}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-center">
+                        <div class="form-group col-6 text-center">
+                            <label for="img" class="input-file-button">
+                                <span class="input-file-icon-wrapper">
+                                    <img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
+                                <span class="input-file-button-text">Выбрать изображения товара</span>
+                            </label>
+                            <input
+                                    name="img"
+                                    type="file"
+                                    id="img"
+                                    class="add-input-img"
+                                    onchange="myFunc(this)"
+                                    multiple
+                                    required
+                                    value="">
+                        </div>
+                    </div>
 
-            <form action="/add" method="POST" enctype="multipart/form-data" novalidate>
-                <div class="add-field-title">
-                    <input id="title" name="title" oninput="pretitle1.innerHTML = this.value; pretitle2.innerHTML = this.value" type="text" class="add-input-title" required value="" placeholder="Название товара...">
-                    <label for="title"></label>
-                    <p id="info1"></p>
-                </div>
+                    <ul id="images" class="form-row justify-content-around">
 
-                <div class="add-field-short-description">
-                    <textarea id="short-description" name="short_description" class="add-input-short-description"  oninput="previewdescr.innerHTML=this.value" required placeholder="Краткое описание для карточки товара..."></textarea>
-                    <label for="short_description"></label>
-                </div>
+                    </ul>
 
-                <div class="add-field-description">
-                    <textarea id="description" name="description" class="add-input-description" required placeholder="Описание для страницы товара..."></textarea>
-                    <label for="description"></label>
-                </div>
-
-                <div class="add-field-price">
-                    <input id="price" name="price" type="number" oninput="preprice1.innerHTML = this.value; preprice2.innerHTML = this.value" class="add-input-price" required min="1" value="" placeholder="Цена товара...">
-                    <label for="price"></label>
-                </div>
-
-                <div class="add-field-img">
-                    <input name="img" type="file" id="img" class="add-input-img" onchange="myFunc(this)" multiple value="">
-                    <label for="img" class="input-file-button">
-                        <span class="input-file-icon-wrapper"><img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
-                        <span class="input-file-button-text">Выберите изображения товара</span>
-                    </label>
-                </div>
-
-                <button class="news-btn">Добавить товар</button>
-            </form>
-
+                    <div class="form-row justify-content-center">
+                        <button type="submit" class="news-btn">Добавить товар</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
