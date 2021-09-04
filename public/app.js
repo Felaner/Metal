@@ -14,7 +14,7 @@ function myFunc(input) {
             reader[i] = new FileReader();
             reader[i].readAsDataURL(input.files[i]);
 
-            images.innerHTML += '<li><label><input id="' + name + '" name="checkedImage" type="radio" onclick="a(this)" required/><span id="' + name2 + '" style=""></span></label></li>';
+            images.innerHTML += '<li class="liChecked" ><label><input id="' + name + '" name="checkedImage" type="radio" onclick="a(this)" required/><span id="' + name2 + '" style=""></span></label></li>';
 
             (function (name, name2) {
                 reader[i].onload = function (e) {
@@ -34,5 +34,6 @@ function myFunc(input) {
 
 function a(input) {
     let previewImage = document.getElementById('previewimg');
-    previewImage.src = input.style.background.slice(5, -30)
+    document.getElementById('selectedImage').value = $('.liChecked').index(input.parentNode.parentNode);
+    previewImage.src = input.style.background.slice(5, -30);
 }

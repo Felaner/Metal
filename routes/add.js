@@ -34,9 +34,12 @@ router.post('/', auth, productValidators, async (req, res) => {
             short_description: req.body.short_description,
             description: req.body.description,
             price: req.body.price,
-            preview: 'images/products/' + req.files[0].filename
+            preview: 'images/products/' + req.files[req.body.selectedImage].filename
         });
-        for(let i = 1; i < req.files.length; i++){
+        for(let i = 0; i < req.files.length; i++){
+            if (i === req.body.selectedImage) {
+                continue;
+            }
             Image.create({
                 idProduct: req.body.title,
                 dir: 'images/products/' + req.files[i].filename
