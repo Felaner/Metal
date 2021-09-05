@@ -1,27 +1,68 @@
 <div class="container">
-    <h2 class="add-news-title">Добавить новость</h2>
-    <div class="add-news-rapper">
-
-        <div class="news-field-title">
-            <input id="title" name="title" type="text" class="news-input-title" required value="" placeholder="Заголовок новости...">
-            <label for="title"></label>
-            <p id="info1"></p>
+    {{#if error}}
+        <div class="row">
+            <p class="alert">{{error}}</p>
         </div>
-
-        <div class="news-field-description">
-            <textarea id="description" name="description" class="news-input-description" required placeholder="Текст новости..."></textarea>
-            <label for="description"></label>
+    {{/if}}
+    <div class="add-news col-12">
+        <div class="row justify-content-center">
+            <h3>Добавить новость</h3>
         </div>
+        <div class="col-12">
+            <form action="/add-news" method="POST" enctype="multipart/form-data" novalidate>
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-8">
+                        <label for="newsTitle"></label>
+                        <input
+                                id="newsTitle"
+                                name="newsTitle"
+                                type="text"
+                                class="form-control"
+                                required
+                                value="{{data.newsTitle}}"
+                                placeholder="Заголовок новости..."
+                                style="width: 100%">
+                    </div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-8">
+                        <label for="newsDescription"></label>
+                        <textarea
+                                id="newsDescription"
+                                name="newsDescription"
+                                class="form-control"
+                                required
+                                placeholder="Текст новости..."
+                                style="width: 100%">{{data.newsDescription}}</textarea>
+                    </div>
+                </div>
+                <div class="form-row justify-content-center">
+                    <div class="form-group col-6 text-center">
+                        <label for="newsImg" class="input-file-button">
+                            <span class="input-file-icon-wrapper">
+                                <img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
+                            <span class="input-file-button-text">Выбрать изображения для новости</span>
+                        </label>
+                        <input
+                                name="newsImg"
+                                type="file"
+                                accept="image/*"
+                                id="newsImg"
+                                class="add-input-img"
+                                onchange="myFunc(this)"
+                                required
+                                value="">
+                    </div>
+                </div>
 
-        <div class="news-field-img">
-            <input name="img" type="file" id="img" class="news-input-img" multiple value="">
-            <label for="img" class="input-file-button">
-                <span class="input-file-icon-wrapper"><img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
-                <span class="input-file-button-text">Выберите фотографии товара</span>
-            </label>
+                <ul id="news-images" class="form-row justify-content-around">
+
+                </ul>
+
+                <div class="form-row justify-content-center">
+                    <button type="submit" class="news-btn">Добавить новость</button>
+                </div>
+            </form>
         </div>
-
-        <button class="news-btn">Добавить новость</button>
-
     </div>
 </div>

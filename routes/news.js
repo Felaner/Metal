@@ -2,11 +2,14 @@
 
 const {Router} = require('express');
 const router = Router();
+const News = require('../models/news');
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    const news = await News.findAll()
     res.render('news', {
         title: 'Новости',
-        isNews: true
+        isNews: true,
+        news
     });
 });
 

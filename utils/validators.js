@@ -43,3 +43,8 @@ exports.productValidators = [
     body('description').isLength({min: 1}).withMessage('Введите описание').trim(),
     body('checkedImage').notEmpty().withMessage('Выберите хотя бы одно изображение для карточки')
 ]
+
+exports.newsValidators = [
+    body('newsTitle').isLength({min: 1}).withMessage('Введите заголовок новости').trim(),
+    body('newsDescription').isLength({min: 1}).withMessage('Введите содержимое новости').trim()
+]

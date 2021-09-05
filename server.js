@@ -51,7 +51,10 @@ app.use(session({
     saveUninitialized: false
 }));
 
-app.use(fileMiddleware.array('img', 4));
+app.use(fileMiddleware.fields([
+    { name: 'img', maxCount: 4 },
+    { name: 'newsImg', maxCount: 1}
+]));
 
 app.use(flash());
 app.use(varMiddleware)

@@ -1,8 +1,10 @@
 const {Router} = require('express');
-const Product = require('../models/product');
-const Image = require('../models/images');
+const News = require('../models/news');
+const {validationResult} = require('express-validator');
+const {newsValidators} = require('../utils/validators');
 const auth = require('../middleware/auth');
 const router = Router();
+const moment = require('moment');
 
 router.get('/', auth, (req, res) => {
     res.render('add-news', {
@@ -11,33 +13,30 @@ router.get('/', auth, (req, res) => {
     });
 });
 
-// router.post('/', auth, async (req, res) => {
-//     res.status(422).render('add',{
-//         title: 'Добавить товар',
-//         isAdd: true,
-//         data: {
-//             title: '',
-//             description: '',
-//             price: '',
-//             img: ''
-//         }
-//     })
-//     try {
-//         await Product.create({
-//             title: req.body.title,
-//             description: req.body.description,
-//             price: req.body.price
-//         });
-//         for(let i = 0; i < req.files.length; i++){
-//             Image.create({
-//                 idProduct: req.body.title,
-//                 dir: 'images/products/' + req.files[i].filename
-//             });
-//         }
-//         res.redirect('/add');
-//     } catch(e) {
-//         console.dir(e);
-//     }
-// });
+router.post('/', auth, newsValidators, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).render('add-news',{
+            title: 'Добавить новость',
+            isAddNews: true,
+            error: errors.array()[0].msg,
+            data: {
+                newsTitle: req.body.newsTitle,
+                newsDescription: req.body.newsDescription
+            }
+        })
+    }
+    try {
+        await News.create({
+            title: req.body.newsTitle,
+            description: req.body.newsDescription,
+            dir: 'images/news/' + req.files['newsImg'][0].filename,
+            createdAt: moment().format('L')
+        });
+        res.redirect('/add-news');
+    } catch(e) {
+        console.dir(e);
+    }
+});
 
 module.exports = router;

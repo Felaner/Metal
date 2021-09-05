@@ -1,51 +1,5 @@
-.add-news-title{
-    text-align: center;
-}
-
-.news-input-title {
-    width: 99%;
-    height: 35px;
-    border: 2px solid #000;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.news-input-title:focus{
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.news-input-description {
-    width: 99%;
-    height: 330px;
-    border: 2px solid #000;
-    padding: 5px;
-    resize: none;
-    border-radius: 5px;
-}
-
-.news-input-description:focus {
-    color: #212529;
-    outline: 0;
-    border-radius: 5px;
-    border: 2px solid #03a9f4;
-}
-
-.news-field-img {
-    width: 100%;
-    position: relative;
-    margin: 15px 0;
-    text-align: center;
-}
-
-.news-input-img {
-    height: 35px;
-    border: 2px solid #000;
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
+.add-news {
+    padding: 20px 0;
 }
 
 .news-btn {

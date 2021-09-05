@@ -4,7 +4,7 @@ const {Router} = require('express');
 const router = Router();
 
 const Product = require('../models/product');
-const Images = require('../models/images');
+const Images = require('../models/image');
 
 router.get('/', async (req, res) => {
     try {

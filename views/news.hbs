@@ -1,7 +1,7 @@
 <div class="container">
     <div class="news row justify-content-center">
         <div class="col-12">
-            <div class="row position-absolute">
+            <div class="row position-absolute justify-content-between" style="width: 100%">
                 <ul class="breadcrumbs">
 
                     <li class="breadcrumbs-item">
@@ -13,116 +13,43 @@
                     </li>
 
                 </ul>
+                {{#if isAuth}}
+                    <li class="add-product-li"><a class="add-product" href="/add-news">Добавить новость</a></li>
+                {{/if}}
             </div>
             <div class="row justify-content-center mb-3">
                 <h2 ><span class="title-color">Наши</span> новости</h2>
             </div>
         </div>
-
         <div class="col-md-8">
-            <div class="wp-block property list">
-                <div class="wp-block-body">
-                    <div class="wp-block-img">
-                        <a href="#">
-                            <img src="images/slider/1.jpg" alt="">
-                        </a>
+            {{#if news.length}}
+                {{#each news}}
+                    <div class="wp-block property list">
+                        <div class="wp-block-body">
+                            <div class="wp-block-img">
+                                <a href="#">
+                                    <img src="{{dir}}" alt="">
+                                </a>
+                            </div>
+                            <div class="wp-block-content">
+                                <small>
+                                    <span aria-hidden="true"></span> {{createdAt}}
+                                </small>
+                                <h4 class="content-title">{{title}}</h4>
+                                <p class="description">{{description}}</p>
+                                <span class="pull-left">
+                                    <span class="" aria-hidden="true"></span>Мастер
+                                </span>
+                                <span class="pull-right">
+                                    <span class="capacity">
+                                    <i class="fa fa-user"></i>Иван Васильевич
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="wp-block-content">
-                        <small>
-                            <span aria-hidden="true"></span> 11.01.2015
-                        </small>
-                        <h4 class="content-title">Lorem ipsum</h4>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam.</p>
-                        <span class="pull-left">
-                            <span class="" aria-hidden="true"></span>Мастер
-                        </span>
-                        <span class="pull-right">
-                            <span class="capacity">
-                            <i class="fa fa-user"></i>Иван Васильевич
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wp-block property list">
-                <div class="wp-block-body">
-                    <div class="wp-block-img">
-                        <a href="#">
-                            <img src="images/slider/1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="wp-block-content">
-                        <small>
-                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 11.01.2015
-                        </small>
-                        <h4 class="content-title">Lorem ipsum</h4>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam.</p>
-                        <span class="pull-left">
-                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>Мастер
-                        </span>
-                        <span class="pull-right">
-                            <span class="capacity">
-                            <i class="fa fa-user"></i>Иван Васильевич
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wp-block property list">
-                <div class="wp-block-body">
-                    <div class="wp-block-img">
-                        <a href="#">
-                            <img src="images/slider/1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="wp-block-content">
-                        <small>
-                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 11.01.2015
-                        </small>
-                        <h4 class="content-title">Lorem ipsum</h4>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam.</p>
-                        <span class="pull-left">
-                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>Мастер
-                        </span>
-                        <span class="pull-right">
-                            <span class="capacity">
-                            <i class="fa fa-user"></i>Иван Васильевич
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wp-block property list">
-                <div class="wp-block-body">
-                    <div class="wp-block-img">
-                        <a href="#">
-                            <img src="images/slider/1.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="wp-block-content">
-                        <small>
-                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> 11.01.2015
-                        </small>
-                        <h4 class="content-title">Lorem ipsum</h4>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisg elitm Ut tincidunt purus iaculis ipsum dctum non dtum quam.</p>
-                        <span class="pull-left">
-                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>Мастер
-                        </span>
-                        <span class="pull-right">
-                            <span class="capacity">
-                            <i class="fa fa-user"></i>Иван Васильевич
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+                {{/each}}
+            {{/if}}
         </div>
     </div>
 </div>
-
-<!--{{#if isAuth}}-->
-<!--    <li class="add-product-li"><a class="add-product" href="/add-news">Добавить новость</a></li>-->
-<!--{{/if}}-->

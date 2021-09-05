@@ -1,7 +1,7 @@
 const {Router} = require('express');
 const {validationResult} = require('express-validator');
 const Product = require('../models/product');
-const Image = require('../models/images');
+const Image = require('../models/image');
 const auth = require('../middleware/auth');
 const { productValidators } = require('../utils/validators');
 const router = Router();
@@ -34,7 +34,7 @@ router.post('/', auth, productValidators, async (req, res) => {
             short_description: req.body.short_description,
             description: req.body.description,
             price: req.body.price,
-            preview: 'images/products/' + req.files[req.body.selectedImage].filename
+            preview: 'images/products/' + req.files['img'][req.body.selectedImage].filename
         });
         for(let i = 0; i < req.files.length; i++){
             if (i === req.body.selectedImage) {
@@ -42,7 +42,7 @@ router.post('/', auth, productValidators, async (req, res) => {
             }
             Image.create({
                 idProduct: req.body.title,
-                dir: 'images/products/' + req.files[i].filename
+                dir: 'images/products/' + req.files['img'][i].filename
             });
         }
         res.redirect('/add');
