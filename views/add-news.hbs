@@ -6,7 +6,7 @@
     {{/if}}
     <div class="add-news col-12">
         <div class="row justify-content-center">
-            <h3>Добавить новость</h3>
+            <h3>Новая новость</h3>
         </div>
         <div class="col-12">
             <form action="/add-news" method="POST" enctype="multipart/form-data" novalidate>
@@ -37,11 +37,11 @@
                     </div>
                 </div>
                 <div class="form-row justify-content-center">
-                    <div class="form-group col-6 text-center">
+                    <div class="form-group col-3 text-center">
                         <label for="newsImg" class="input-file-button">
                             <span class="input-file-icon-wrapper">
                                 <img class="input-file-icon" src="images/icons/upload.svg" alt="Выбрать файл" width="25"></span>
-                            <span class="input-file-button-text">Выбрать изображения для новости</span>
+                            <span class="input-file-button-text">Выбрать изображение</span>
                         </label>
                         <input
                                 name="newsImg"
@@ -54,10 +54,6 @@
                                 value="">
                     </div>
                 </div>
-
-                <ul id="news-images" class="form-row justify-content-around">
-
-                </ul>
 
                 <div class="form-row justify-content-center">
                     <button type="submit" class="news-btn">Добавить новость</button>

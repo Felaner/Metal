@@ -56,10 +56,10 @@
 }
 
 .alert {
-    margin: 20px auto;
+    margin: 20px auto 0;
     text-align: center;
     width: 300px;
     padding: 15px;
-    border: solid 1px var(--orange);
+    border: solid 2px red;
     border-radius: 3px;
 }

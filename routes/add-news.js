@@ -6,6 +6,7 @@ const auth = require('../middleware/auth');
 const router = Router();
 const moment = require('moment');
 
+
 router.get('/', auth, (req, res) => {
     res.render('add-news', {
         title: 'Добавить новость',
@@ -31,7 +32,7 @@ router.post('/', auth, newsValidators, async (req, res) => {
             title: req.body.newsTitle,
             description: req.body.newsDescription,
             dir: 'images/news/' + req.files['newsImg'][0].filename,
-            createdAt: moment().format('L')
+            createdAt: moment().format('DD.MM.YYYY')
         });
         res.redirect('/add-news');
     } catch(e) {

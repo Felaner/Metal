@@ -46,5 +46,9 @@ exports.productValidators = [
 
 exports.newsValidators = [
     body('newsTitle').isLength({min: 1}).withMessage('Введите заголовок новости').trim(),
-    body('newsDescription').isLength({min: 1}).withMessage('Введите содержимое новости').trim()
+    body('newsDescription').isLength({min: 1}).withMessage('Введите содержимое новости').trim(),
+    body('newsImg').custom((value, {req}) => {
+        if (!req.files['newsImg']) throw new Error('Выберите изображение')
+        return true
+    })
 ]
