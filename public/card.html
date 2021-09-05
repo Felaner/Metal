@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="card-box">
+    <div class="card-main">
+        <img src="" alt="">
+        <div class="card-main-body">
+            <h3 class="card-title">Название товара</h3>
+            <p class="card-price">Стоимость руб.</p>
+        </div>
+    </div>
+
+    <div class="card-second">
+        <div class="card-second-divider"></div>
+        <div class="card-second-body">
+            <h3 class="card-title">Название товара</h3>
+            <p class="card-shortdescr">описание товара</p>
+        </div>
+    </div>
+</div>
+
+
+.card-box{
+position: relative;
+display: flex;
+height: 400px;
+width: 260px;
+overflow: hidden;
+white-space: nowrap;
+}
+
+.card-main{
+width: 260px;
+height: 400px;
+background-color: #000;
+}
+
+.card-title{
+color: #fff;
+text-align: center;
+}
+
+.card-price{
+color: #fff;
+text-align: center;
+}
+
+.card-shortdescr{
+color: #fff;
+text-align: center;
+}
+
+.card-second{
+width: 260px;
+height: 400px;
+background-color: rgb(61, 59, 59);
+position: absolute;
+transform: translateY(90%);
+transition: 0.4s;
+}
+
+.card-second:hover{
+transform: translateY(0);
+}
+
+.card-second-divider{
+width: 260px;
+height: 50px;
+background-color: #ff9900;
+}
+
+
+
+</body>
+</html>
