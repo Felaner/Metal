@@ -24,27 +24,26 @@
         <div class="col-md-8">
             {{#if news.length}}
                 {{#each news}}
-                    <div class="wp-block property list">
-                        <div class="wp-block-body">
-                            <div class="wp-block-img">
-                                <a href="#">
-                                    <img src="{{dir}}" alt="">
-                                </a>
+                    <div class="row news-list">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{{dir}}" alt="" width="100%" height="193px" style="border-radius: 10px">
                             </div>
-                            <div class="wp-block-content">
-                                <small>
+                            <div class="col">
+                                <div class="row">
                                     <span aria-hidden="true"></span> {{createdAt}}
-                                </small>
-                                <h4 class="content-title">{{title}}</h4>
-                                <p class="description">{{description}}</p>
-                                <span class="pull-left">
-                                    <span class="" aria-hidden="true"></span>Мастер
-                                </span>
-                                <span class="pull-right">
-                                    <span class="capacity">
-                                    <i class="fa fa-user"></i>Иван Васильевич
-                                    </span>
-                                </span>
+                                </div>
+                                <div class="row news-title">
+                                    <h4>{{title}}</h4>
+                                </div>
+                                <hr>
+                                <div class="row news-content hidden">
+                                    <p class="text-justify">{{description}}</p>
+                                </div>
+                                <hr>
+                                <div class="row justify-content-end news-button">
+                                    <button type="button" onclick="b(this)">Развернуть</button>
+                                </div>
                             </div>
                         </div>
                     </div>

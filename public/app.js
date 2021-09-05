@@ -37,3 +37,16 @@ function a(input) {
     document.getElementById('selectedImage').value = $('.liChecked').index(input.parentNode.parentNode);
     previewImage.src = input.style.background.slice(5, -30);
 }
+
+function b(btn) {
+    let content = document.querySelector('.news .news-list .news-content');
+    if (btn.innerHTML === 'Развернуть') {
+        content.classList.remove('hidden')
+        content.classList.add('show')
+        btn.innerHTML = 'Свернуть'
+    } else {
+        content.classList.remove('show')
+        content.classList.add('hidden')
+        btn.innerHTML = 'Развернуть'
+    }
+}

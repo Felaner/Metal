@@ -7,12 +7,12 @@ const news = sequelize.define('news', {
         allowNull: false
     },
     description: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     dir: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     },
     createdAt: {
         type: Sequelize.STRING,
