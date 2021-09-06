@@ -5,11 +5,13 @@
 
 .news .news-list {
     margin: 15px;
+    transition: all 1s;
 }
 
 .news .news-list > .row {
     padding: 15px;
     border: solid 1px var(--orange);
+    transition: all 1s;
 }
 
 .news .news-list .col-4 {
@@ -21,7 +23,7 @@
 }
 
 .news .news-list hr {
-    margin-top: -5px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -29,18 +31,37 @@
     padding: 0 10px;
     overflow: hidden;
     transition: all 1s;
-}
 
-.news .hidden {
-    max-height: 110px;
-}
-
-.news .show {
-    max-height: 100%;
 }
 
 .news .news-list .news-content p {
     text-indent: 7%;
+
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-last: always;
+    -webkit-hyphenate-limit-zone: 8%;
+
+    -moz-hyphens: auto;
+    -moz-hyphenate-limit-chars: 6 3 3;
+    -moz-hyphenate-limit-lines: 2;
+    -moz-hyphenate-limit-last: always;
+    -moz-hyphenate-limit-zone: 8%;
+
+    -ms-hyphens: auto;
+    -ms-hyphenate-limit-chars: 6 3 3;
+    -ms-hyphenate-limit-lines: 2;
+    -ms-hyphenate-limit-last: always;
+    -ms-hyphenate-limit-zone: 8%;
+
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-last: always;
+    hyphenate-limit-zone: 8%;
 }
 
 .news .news-list .news-button {
@@ -61,4 +82,17 @@
     border: solid 1px #fff;
     color: #000;
     background: var(--orange);
+}
+
+.collapse:not(.show) {
+    display: block;
+    max-height: 105px;
+}
+
+.collapse .show {
+    max-height: 100%;
+}
+
+.collapsing {
+    min-height: 105px;
 }
