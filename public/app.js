@@ -38,15 +38,14 @@ function a(input) {
     previewImage.src = input.style.background.slice(5, -30);
 }
 
-function b(btn) {
-    let content = document.querySelector('.news .news-list .news-content');
+function b(btn, id) {
+    $('.news-list'+id+' .news-content').hide();
     if (btn.innerHTML === 'Развернуть') {
-        content.classList.remove('hidden')
-        content.classList.add('show')
-        btn.innerHTML = 'Свернуть'
-    } else {
-        content.classList.remove('show')
-        content.classList.add('hidden')
-        btn.innerHTML = 'Развернуть'
+        $(btn).siblings()
+            .children()
+            .slideUp('slow');
+        $(btn)
+            .children()
+            .slideDown('slow')
     }
 }

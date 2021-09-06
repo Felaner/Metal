@@ -24,7 +24,7 @@
         <div class="col-md-8">
             {{#if news.length}}
                 {{#each news}}
-                    <div class="row news-list">
+                    <div class="row news-list news-list{{id}}">
                         <div class="row">
                             <div class="col-4">
                                 <img src="{{dir}}" alt="" width="100%" height="193px" style="border-radius: 10px">
@@ -37,12 +37,12 @@
                                     <h4>{{title}}</h4>
                                 </div>
                                 <hr>
-                                <div class="row news-content hidden">
-                                    <p class="text-justify">{{description}}</p>
+                                <div class="row news-content collapse" id="collapseExample{{id}}">
+                                    <p>{{description}}</p>
                                 </div>
                                 <hr>
                                 <div class="row justify-content-end news-button">
-                                    <button type="button" onclick="b(this)">Развернуть</button>
+                                    <button type="button" data-toggle="collapse" data-target="#collapseExample{{id}}" aria-expanded="false" aria-controls="collapseExample{{id}}">Развернуть</button>
                                 </div>
                             </div>
                         </div>
