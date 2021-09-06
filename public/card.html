@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
 <div class="card-box">
     <div class="card-main">
-        <img src="" alt="">
+        <div class="card-img"><img src="http://www.gabitie.com/shopimages/products/v1mains/DECO_SCOTTISH-PEBBLES.jpg" alt=""></div>
         <div class="card-main-body">
             <h3 class="card-title">Название товара</h3>
             <p class="card-price">Стоимость руб.</p>
@@ -18,35 +10,46 @@
     <div class="card-second">
         <div class="card-second-divider"></div>
         <div class="card-second-body">
-            <h3 class="card-title">Название товара</h3>
-            <p class="card-shortdescr">описание товара</p>
+            <h3 class="card-second-title">Название товара</h3>
+            <p class="card-shortdescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit iste deserunt ea ratione dicta quis molestiae quas repellat consequuntur doloribus repellendus ipsum fugiat hic tempora accusamus, a fugit aspernatur cupiditate?</p>
+        </div>
+        <div class="btn-wrapper">
+            <button class="btn">Подробнее</button>
+            <button class="btn-second">Оформить</button>
         </div>
     </div>
 </div>
 
-
 .card-box{
 position: relative;
 display: flex;
-height: 400px;
+height: 350px;
 width: 260px;
+border-radius: 25px;
 overflow: hidden;
-white-space: nowrap;
+box-shadow: 0px 0px 11px 10px rgba(0, 0, 0, 0.21);
 }
 
 .card-main{
-width: 260px;
-height: 400px;
-background-color: #000;
+width: 100%;
+height: 350px;
+padding: 8px;
+border-radius: 25px;
+}
+
+img{
+width: 244px;
+border-radius: 25px;
 }
 
 .card-title{
-color: #fff;
+color: rgb(0, 0, 0);
 text-align: center;
+margin: 0;
 }
 
 .card-price{
-color: #fff;
+color: rgb(0, 0, 0);
 text-align: center;
 }
 
@@ -57,11 +60,22 @@ text-align: center;
 
 .card-second{
 width: 260px;
-height: 400px;
-background-color: rgb(61, 59, 59);
+height: 350px;
+border-radius: 25px;
+background-color: rgba(61, 59, 59, 0.8);
 position: absolute;
 transform: translateY(90%);
 transition: 0.4s;
+}
+
+.card-second-body{
+width: 100%;
+
+}
+
+.card-second-title{
+color: #fff;
+text-align: center;
 }
 
 .card-second:hover{
@@ -69,12 +83,43 @@ transform: translateY(0);
 }
 
 .card-second-divider{
-width: 260px;
+width: 100%;
 height: 50px;
-background-color: #ff9900;
+background-color: #ff5800;
 }
 
+.btn-wrapper{
+display: flex;
+justify-content: space-around;
+}
 
+.btn{
+width: 100px;
+height: 45px;
+background-color: #d9d9d9;
+border: none;
+border-radius: 15px;
+font-weight: 700;
+transition: 0.4s;
+}
 
-</body>
-</html>
+.btn:hover{
+border: 1px solid #000;
+background-color: #fff;
+}
+
+.btn-second{
+width: 100px;
+height: 45px;
+background-color: #303030;
+color: #fff;
+border: none;
+border-radius: 15px;
+font-weight: 700;
+transition: 0.4s;
+}
+
+.btn-second:hover{
+background-color: #ff5800;
+color: #fff;
+}
