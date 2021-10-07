@@ -39,14 +39,14 @@ exports.loginValidators = [
 exports.productValidators = [
     body('title').isLength({min: 1}).withMessage('Введите наименование товара').trim(),
     body('price').isNumeric().withMessage('Введите стоимость товара').trim(),
-    body('short_description').isLength({min: 1}).withMessage('Введите краткое описание').trim(),
+    body('short_description').isLength({min: 1, max: 30}).withMessage('Введите краткое описание, максимум 30 символов').trim(),
     body('description').isLength({min: 1}).withMessage('Введите описание').trim(),
     body('checkedImage').notEmpty().withMessage('Выберите хотя бы одно изображение для карточки')
 ]
 
 exports.newsValidators = [
     body('newsTitle').isLength({min: 1}).withMessage('Введите заголовок новости').trim(),
-    body('newsDescription').isLength({min: 1}).withMessage('Введите содержимое новости').trim(),
+    body('newsDescription').isLength({min: 50}).withMessage('Введите содержимое новости, минимум 50 символов').trim(),
     body('newsImg').custom((value, {req}) => {
         if (!req.files['newsImg']) throw new Error('Выберите изображение')
         return true

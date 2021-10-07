@@ -38,14 +38,10 @@ function a(input) {
     previewImage.src = input.style.background.slice(5, -30);
 }
 
-function b(btn, id) {
-    $('.news-list'+id+' .news-content').hide();
+function b(btn) {
     if (btn.innerHTML === 'Развернуть') {
-        $(btn).siblings()
-            .children()
-            .slideUp('slow');
-        $(btn)
-            .children()
-            .slideDown('slow')
+        btn.innerHTML = 'Свернуть'
+    } else {
+        btn.innerHTML = 'Развернуть'
     }
 }

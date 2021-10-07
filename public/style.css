@@ -31,7 +31,7 @@ body {
 
 .wrapper {
     position: relative;
-    min-height: calc(100vh - 216px);
+    min-height: calc(100vh - 236px);
 }
 
 button {

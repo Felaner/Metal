@@ -22,13 +22,13 @@ router.post('/', registerValidators, async (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             req.flash('registerError', errors.array()[0].msg);
-            return res.status(422).redirect('/auth/register')
+            return res.status(422).redirect('/admin')
         }
         const hashPassword = await bcrypt.hash(password, 10)
         await Admin.create({
             email, password: hashPassword
         });
-        res.redirect('/auth/login');
+        res.redirect('/admin');
     } catch(e) {
         console.log(e);
     }

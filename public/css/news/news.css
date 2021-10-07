@@ -28,10 +28,9 @@
 }
 
 .news .news-list .news-content {
-    padding: 0 10px;
+    padding: 5px 10px;
     overflow: hidden;
     transition: all 1s;
-
 }
 
 .news .news-list .news-content p {
@@ -87,10 +86,6 @@
 .collapse:not(.show) {
     display: block;
     max-height: 105px;
-}
-
-.collapse .show {
-    max-height: 100%;
 }
 
 .collapsing {
